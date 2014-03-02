@@ -11,7 +11,7 @@ sample_interval = 60 / samples_per_minute
 
 filepath = "/home/measurements/samples" 
 
-def main():
+def main_loop():
     while True:
 	all_samples = []
 	try:
@@ -27,7 +27,7 @@ def main():
 
 def run():
 #	with daemon.DaemonContext():
-		main()
+		main_loop()
 
 if __name__ == "__main__":
 	run()
