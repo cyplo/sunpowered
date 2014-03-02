@@ -1,4 +1,5 @@
 import pickle
+import numpy
 import pprint
 import datetime 
 import matplotlib as mpl
@@ -13,9 +14,8 @@ def extract_date(sample):
 	date = datetime.datetime.fromtimestamp(timestamp)
 	return date
 
-def plot(key, dates, all_samples):
-	data = map(lambda sample: sample[key], all_samples)
-	plt.plot(dates, data, label=key)
+def plot(subplot, data, dates):
+	subplot.plot(dates, data, label=key)
 
 all_samples = []
 samples_count = 0 
@@ -35,14 +35,35 @@ dates = map(extract_date, all_samples)
 
 print "plotting ..."
 dpi=96
-plt.figure(figsize=(1780/dpi, 768/dpi), dpi=dpi)
+
+fig = plt.figure(figsize=(1920/dpi, 1080/dpi), dpi=dpi)
+ax = fig.add_subplot(111)
+
+max_voltage = 0
+min_voltage = 0
 
 for key in all_samples[-1].keys():
 	if "voltage" in key or "vcc" in key:
-		plot(key, dates, all_samples)
+		data = map(lambda sample: sample[key], all_samples)
 
-plt.legend(loc='center left', bbox_to_anchor=(1, 0.8), fancybox=True)
+		local_min_voltage = min(data)		
+		min_voltage = min(min_voltage, local_min_voltage)
 
+		local_max_voltage = max(data)		
+		max_voltage = max(max_voltage, local_max_voltage)
+
+		plot(ax, data, dates)
+
+plt.ylim(min_voltage-0.5, max_voltage+0.5)
+
+print "max voltage: " + str(max_voltage)
+print "min voltage: " + str(min_voltage)
+
+start, end = ax.get_ylim()
+plt.yticks(numpy.arange(start, end, 0.5))
+plt.grid()
+plt.legend(loc='center left', bbox_to_anchor=(1, 0.7), fancybox=True)
 plt.savefig("voltages.png", bbox_inches='tight')
+
 print "done."
 
