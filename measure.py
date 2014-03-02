@@ -1,6 +1,5 @@
 from adc_pi import *
 import time
-import pprint 
 
 def measure_raw():
 	multiplier = 11 # from voltage divider
@@ -47,12 +46,6 @@ def measure():
 	measurements['current_sensor_voltage'] = measurements['current_sensor_voltage_raw'] - measurements['current_sensor_voltage_offset']
 	measurements['load_current']    = measurements['current_sensor_voltage'] / 0.185
  	measurements['load_power_usage'] = measurements['load_voltage'] * measurements['load_current']
-
+	measurements['timestamp'] = time.time()
 	return measurements
-
-while True:
-	measurements = measure()
-	pp = pprint.PrettyPrinter(indent=4)
-	pp.pprint(measurements)
-	time.sleep(15)
 
