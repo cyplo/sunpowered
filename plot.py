@@ -7,7 +7,7 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 import functools
-
+import math
 
 def extract_date(sample):
 	timestamp = sample['timestamp']
@@ -19,20 +19,19 @@ def plot(subplot, data, dates, key):
 
 def plot_samples(all_samples):
 
-	print "extracting data..."
 	dates = map(extract_date, all_samples)
 
-	print "plotting ..."
+	print "plotting ...",
 	dpi=96
 
 	fig = plt.figure(figsize=(1920/dpi, 1080/dpi), dpi=dpi)
 	ax = fig.add_subplot(111)
 
 	max_voltage = 0
-	min_voltage = 0
+	min_voltage = 128
 
 	for key in all_samples[-1].keys():
-		if "voltage" in key or "vcc" in key:
+		if not "current" in key and ("voltage" in key or "vcc" in key):
 			data = map(lambda sample: sample[key], all_samples)
 
 			local_min_voltage = min(data)		
@@ -43,10 +42,10 @@ def plot_samples(all_samples):
 
 			plot(ax, data, dates, key)
 
-	plt.ylim(min_voltage-0.5, max_voltage+0.5)
+	max_voltage = math.ceil(max_voltage)
+	min_voltage = math.floor(min_voltage)
 
-	print "max voltage: " + str(max_voltage)
-	print "min voltage: " + str(min_voltage)
+	plt.ylim(min_voltage-0.5, max_voltage+0.5)
 
 	start, end = ax.get_ylim()
 	plt.yticks(numpy.arange(start, end, 0.5))
