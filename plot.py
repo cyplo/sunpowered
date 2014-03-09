@@ -1,4 +1,4 @@
-from measurement_config import filepath
+from measurement_config import voltages_plot_filepath
 import pickle
 import numpy
 import pprint
@@ -52,7 +52,7 @@ def plot_samples(all_samples):
 	plt.yticks(numpy.arange(start, end, 0.5))
 	plt.grid()
 	plt.legend(loc='center left', bbox_to_anchor=(1, 0.7), fancybox=True)
-	plt.savefig("/mnt/measurements/voltages.png", bbox_inches='tight')
+	plt.savefig(voltages_plot_filepath(), bbox_inches='tight')
 
 	print "done."
 
