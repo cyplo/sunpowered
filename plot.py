@@ -1,3 +1,4 @@
+from measurement_config import filepath
 import pickle
 import numpy
 import pprint
@@ -7,7 +8,6 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 import functools
 
-filepath = "/home/measurements/samples" 
 
 def extract_date(sample):
 	timestamp = sample['timestamp']
@@ -22,7 +22,7 @@ samples_count = 0
 
 while samples_count <= 0:
 	try:
-		all_samples = pickle.load( open( filepath, "rb" ) )
+		all_samples = pickle.load( open( filepath(), "rb" ) )
 	except(IOError, EOFError, ValueError):
 		print "error reading, will retry..."
 		pass
