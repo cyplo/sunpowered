@@ -8,6 +8,7 @@ mpl.use('Agg')
 import matplotlib.pyplot as plt
 import functools
 import math
+import gc
 
 def extract_date(sample):
 	timestamp = sample['timestamp']
@@ -52,6 +53,10 @@ def plot_samples(all_samples):
 	plt.grid()
 	plt.legend(loc='center left', bbox_to_anchor=(1, 0.7), fancybox=True)
 	plt.savefig(voltages_plot_filepath(), bbox_inches='tight')
-
 	print "done."
-
+	print "cleaning up..."
+	fig.clf()
+	plt.close()
+	del fig
+	del ax
+	gc.collect()

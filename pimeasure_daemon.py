@@ -10,6 +10,7 @@ import logging
 import SimpleHTTPServer
 import SocketServer
 import threading
+import resource
 
 days_to_keep = 3
 samples_per_minute = 30
@@ -27,6 +28,7 @@ def main_loop():
     last_plotted = time.time()
     
     while True:
+
 	if(samples_count >= samples_to_keep):
 		all_samples.pop(0)
 	all_samples.append( measure() )
