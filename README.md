@@ -1,13 +1,14 @@
 ## python scripts
 
-     aptitude install python-smbus python-matplotlib python-daemon python-zdaemon
+     ~# aptitude install python-smbus python-matplotlib python-daemon python-zdaemon
 
-     root@cloudy:~# cat /etc/modules 
+     ~# cat /etc/modules 
      bcm2708-rng
      ipv6
      i2c-bcm2708 
      i2c-dev
 
+     ~# zdaemon -p 'python /mnt/sunpowered/pimeasure_daemon.py' -d -s /var/run/pimeasure start
 
 these
 * gather data from sensors connected through adcPi
