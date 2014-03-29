@@ -18,3 +18,6 @@ these
 * 3x 500mmx500mm 5mm plexi sheet
 * general mounting screw: M3 x12mm
 * 
+
+##TODO:
+* make data acquisition done on separate thread, should help with small dents in the graph
