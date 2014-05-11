@@ -20,4 +20,6 @@ these
 * 
 
 ##TODO:
+* make acquisition interval much longer, however detect potentially interesting events and then temporarily increase resolution
+* add freakin tests 
 * make data acquisition done on separate thread, should help with small dents in the graph
