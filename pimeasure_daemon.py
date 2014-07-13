@@ -5,39 +5,49 @@ from plot import plot_samples
 import os
 import time
 import daemon
-import pickle
 import logging
 import SimpleHTTPServer
 import SocketServer
 import threading
 import resource
 import datetime
+try:
+   import cPickle as pickle
+except:
+   print "warning: using standard pickle instead of cPickle"
+   import pickle
 
-days_to_keep = 5
-samples_per_minute = 30
+days_to_keep = 999
+samples_per_minute = 6
 
 sample_interval = 60 / samples_per_minute
 save_interval = 60 * 15
-plot_interval = 60
+plot_interval = 60 * 5
 
 def should_remove_oldest(all_samples):
 	timestamp = all_samples[0]['timestamp']
 	date = datetime.datetime.fromtimestamp(timestamp)
 	return (datetime.datetime.today() - date).days > days_to_keep 
 
-def main_loop():
+def prepare():
     all_samples = load_samples()
 
+    print "preparations done"
+    return all_samples
+
+def main_loop():
+    all_samples = prepare()
     last_saved = time.time()
     last_plotted = time.time()
     
     while True:
+	print "sampling.."
 	all_samples.append( measure() )
 
 	while(should_remove_oldest(all_samples)):
 		all_samples.pop(0)
 	
-	if((time.time() - last_saved) > save_interval):
+	if( (time.time() - last_saved) > save_interval):
 		print "saving samples..."
 		pickle.dump( all_samples, open( samples_filepath(), "wb" ) )
 		last_saved = time.time()
