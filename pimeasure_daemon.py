@@ -1,4 +1,4 @@
-from measurement_config import  samples_filepath, measurement_directory
+from measurement_config import voltages_plot_filepath, samples_filepath, measurement_directory
 from measure import measure
 from plot import plot_samples
 
@@ -63,9 +63,22 @@ def main_loop():
 		time.sleep(1)
 		wait_time = time.time() - last_time
 
+from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+ 
+class GraphServer(BaseHTTPRequestHandler):
+    def do_GET(self):
+	self.send_response(200)
+	self.send_header('content-type', 'image/png')
+	self.end_headers()
+	f = open(voltages_plot_filepath())
+	self.wfile.write(f.read())
+	f.close()
+	
+
 def serve_plots():
 	PORT = 8000
-	Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+	#Handler = SimpleHTTPServer.SimpleHTTPRequestHandler
+	Handler = GraphServer
 	httpd = SocketServer.TCPServer(("", PORT), Handler)
 	print "serving at port", PORT
 	os.chdir(measurement_directory())
