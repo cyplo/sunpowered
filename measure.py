@@ -39,8 +39,7 @@ def measure():
 	measurements['panel_voltage']      = raw_values[2]
 	measurements['battery_voltage']    = raw_values[3]
 	measurements['load_voltage']       = raw_values[4] 
-	measurements['regulated_12V_rail_voltage'] = raw_values[5]
-	measurements['regulated_5V__rail_voltage'] = raw_values[6]
+	measurements['5V_rail_voltage'] = raw_values[5]
 	measurements['current_sensor_voltage_raw'] = raw_values[7] 
 	measurements['current_sensor_voltage_offset'] = measurements['current_sensor_vcc'] / 2
 	measurements['current_sensor_voltage'] = measurements['current_sensor_voltage_raw'] - measurements['current_sensor_voltage_offset']
