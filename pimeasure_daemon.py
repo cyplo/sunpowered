@@ -37,8 +37,6 @@ def plot(time_keeper, sampler):
         print "plotting.."
         plot_samples(sampler.samples)
         time_keeper.plotted()
-
-        
  
 class GraphServer(BaseHTTPRequestHandler):
     

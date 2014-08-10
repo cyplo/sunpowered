@@ -10,7 +10,6 @@ class TimeKeeper:
         self.saved()
 
     def plotted(self):
-        print "plotted"
         self.last_plotted = time.time()
         self.plotting = False
 
@@ -22,11 +21,9 @@ class TimeKeeper:
 
     def can_plot(self):
         result = ((time.time() - self.last_plotted) > min_plot_interval)
-        print "can plot? " + str(result)
         return result
 
     def can_save(self):
         result = ((time.time() - self.last_saved) > save_interval)
-        print "can save ? " + str(result)
         return result
 

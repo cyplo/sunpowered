@@ -2,6 +2,8 @@
 
      ~# aptitude install python-smbus python-matplotlib python-daemon python-zdaemon
 
+     pip install pyowm
+
      ~# cat /etc/modules 
      bcm2708-rng
      ipv6

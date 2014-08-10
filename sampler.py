@@ -22,7 +22,6 @@ class Sampler:
 
     def sample(self):
         if(self.time_keeper.can_sample()):
-            print "sampling.."
             self.samples.append( measure() )
             while(self.should_remove_oldest()):
                 self.samples.pop(0)
