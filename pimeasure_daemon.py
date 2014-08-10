@@ -1,63 +1,24 @@
 #!/usr/bin/python
 import os
-import time
 import daemon
 import logging
 import SimpleHTTPServer
 import SocketServer
 import threading
 import resource
-import datetime
 import signal
 import sys
+import time
 
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 from measurement_config import voltages_plot_filepath, samples_filepath, measurement_directory
 from plot import plot_samples
 from sampler import Sampler
-
-
+from timekeeper import TimeKeeper
 
 samples_per_minute = 6
-
 sample_interval = 60 / samples_per_minute
-save_interval = 60 * 1
-min_plot_interval = 60
 
-
-def prepare():
-    all_samples = load_samples()
-
-    print "preparations done"
-    return all_samples
-
-class TimeKeeper:
-    def __init__(self):
-        self.plotted()
-        self.saved()
-
-    def plotted(self):
-        print "plotted"
-        self.last_plotted = time.time()
-        self.plotting = False
-
-    def saved(self):
-        self.last_saved = time.time()
-
-    def can_sample(self):
-        return not self.plotting
-
-    def can_plot(self):
-        result = ((time.time() - self.last_plotted) > min_plot_interval)
-        print "can plot? " + str(result)
-        return result
-
-    def can_save(self):
-        result = ((time.time() - self.last_saved) > save_interval)
-        print "can save ? " + str(result)
-        return result
-    
-    
 def main_loop(time_keeper, sampler):
     while True:
         sampler.sample()
