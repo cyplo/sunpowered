@@ -1,7 +1,7 @@
 import datetime
 import time
 
-save_interval = 60 * 1
+save_interval = 60 * 5
 min_plot_interval = 60
 
 class TimeKeeper:
