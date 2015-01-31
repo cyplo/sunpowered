@@ -1,8 +1,8 @@
 ## python scripts
 
-     ~# aptitude install python-smbus python-matplotlib python-daemon python-zdaemon
-
-     pip install pyowm
+     ~# aptitude install python-smbus python-daemon python-zdaemon python-pip python-dev libpng-dev                              
+                                                                                                                                  
+     ~# pip install --upgrade jinja2 mpld3 pyowm matplotlib
 
      ~# cat /etc/modules 
      bcm2708-rng
