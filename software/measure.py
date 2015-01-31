@@ -5,6 +5,8 @@ import urllib2
 import time
 import json
 import pyowm
+import pprint
+import traceback
 
 #weather api has dos protection, call at most every this number of minutes
 weather_call_interval = 15 * 60
@@ -69,14 +71,17 @@ def measure():
         print "fetching weather data..."
         try:
             owm = pyowm.OWM(owm_api_key())
-            observation = owm.weather_at('Wroclaw, pl')
+            observation = owm.weather_at_place('Wroclaw, pl')
             weather = observation.get_weather()
             temperature_data = weather.get_temperature('celsius')
             print "temperature data: " + str(temperature_data)
             ambient_temperature = float(temperature_data['temp'])
             print "storing ambient temperature: " + str(ambient_temperature)
         except: 
-            print "error fetching weather data"
+            e = sys.exc_info()[0]
+            pp = pprint.PrettyPrinter(indent=4)
+            pp.pprint(e)
+            print traceback.format_exc()
             pass
 
     measurements['ambient_temperature'] = ambient_temperature
