@@ -55,6 +55,7 @@ def measure_raw():
     
     return values
 
+# TODO: refactor this mess
 def measure():
     raw_values = measure_raw()
 
@@ -78,6 +79,14 @@ def measure():
     measurements['core_temp'] = temp
     measurements['cpu_percent']=psutil.cpu_percent(interval=1)
     measurements['memory_percent']=psutil.virtual_memory().percent
+    sent_start=psutil.net_io_counters().bytes_sent;
+    time.sleep(1);
+    sent_end=psutil.net_io_counters().bytes_sent
+    measurements['network_out_bytes_1s']=sent_end-sent_start
+    received_start=psutil.net_io_counters().bytes_recv;
+    time.sleep(1);
+    received_end=psutil.net_io_counters().bytes_recv
+    measurements['network_in_bytes_1s']=received_end-received_start
 
     global ambient_temperature
     global last_weather_call
