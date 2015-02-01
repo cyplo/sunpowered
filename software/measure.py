@@ -7,6 +7,7 @@ import json
 import pyowm
 import pprint
 import traceback
+import psutil
 
 #weather api has dos protection, call at most every this number of minutes
 weather_call_interval = 15 * 60
@@ -75,6 +76,9 @@ def measure():
     thermometer.close()
     temp = float(tempText) / 1000
     measurements['core_temp'] = temp
+    measurements['cpu_percent']=psutil.cpu_percent(interval=1)
+    measurements['memory_percent']=psutil.virtual_memory().percent
+
     global ambient_temperature
     global last_weather_call
     if time.time() - last_weather_call >  weather_call_interval:

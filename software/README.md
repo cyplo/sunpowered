@@ -2,7 +2,7 @@
 
      ~# aptitude install python-smbus python-daemon python-zdaemon python-pip python-dev libpng-dev                              
                                                                                                                                   
-     ~# pip install --upgrade jinja2 mpld3 pyowm matplotlib
+     ~# pip install --upgrade jinja2 mpld3 pyowm matplotlib psutil
 
      ~# cat /etc/modules 
      bcm2708-rng
