@@ -10,9 +10,20 @@ import traceback
 
 #weather api has dos protection, call at most every this number of minutes
 weather_call_interval = 15 * 60
-last_weather_call = 0
 
+last_weather_call = 0
 ambient_temperature = 0.0
+f = 0
+try:
+    f = open("/tmp/sunpowered_weather","r+")
+    last_weather_call = float(f.readline())
+    ambient_temperature = float(f.readline())
+except IOError:
+    last_weather_call = time.time()-weather_call_interval 
+    pass
+if (f!=0):
+    f.close() 
+
 
 def measure_raw():
     multiplier = 11 # from voltage divider
@@ -67,22 +78,24 @@ def measure():
     global ambient_temperature
     global last_weather_call
     if time.time() - last_weather_call >  weather_call_interval:
-        last_weather_call = time.time() 
-        print "fetching weather data..."
         try:
             owm = pyowm.OWM(owm_api_key())
             observation = owm.weather_at_place('Wroclaw, pl')
             weather = observation.get_weather()
             temperature_data = weather.get_temperature('celsius')
-            print "temperature data: " + str(temperature_data)
             ambient_temperature = float(temperature_data['temp'])
-            print "storing ambient temperature: " + str(ambient_temperature)
         except: 
             e = sys.exc_info()[0]
             pp = pprint.PrettyPrinter(indent=4)
             pp.pprint(e)
             print traceback.format_exc()
             pass
+        
+        last_weather_call = time.time() 
+        f = open("/tmp/sunpowered_weather","w+")
+        f.write(str(last_weather_call)+"\n")
+        f.write(str(ambient_temperature)+"\n")
+        f.close() 
 
     measurements['ambient_temperature'] = ambient_temperature
     return measurements
