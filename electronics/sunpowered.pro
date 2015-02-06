@@ -1,4 +1,4 @@
-update=Fri 06 Feb 2015 21:45:07 CET
+update=Fri 06 Feb 2015 22:00:29 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,3 +60,5 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=relays
+LibName32=library/library/linear
+LibName33=library/library/device
