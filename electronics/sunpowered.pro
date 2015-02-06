@@ -1,4 +1,4 @@
-update=pią, 6 lut 2015, 19:11:02
+update=Fri 06 Feb 2015 21:45:07 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=/home/cyryl/.kicad
+LibDir=library/library;library/modules
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -59,4 +59,4 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=library/relays
+LibName31=relays
