@@ -297,9 +297,7 @@ PowerOn
 Connection ~ 5150 950 
 Connection ~ 5150 2100
 Wire Wire Line
-	5150 1600 5500 1600
-Wire Wire Line
-	5500 1600 5750 1600
+	5150 1600 5750 1600
 Wire Wire Line
 	5500 2100 5500 2000
 Connection ~ 5500 2100
@@ -336,29 +334,15 @@ Wire Wire Line
 Wire Wire Line
 	6500 1600 6500 2450
 Wire Wire Line
-	3550 950  3650 950 
+	3550 950  6550 950 
 Wire Wire Line
-	3650 950  4500 950 
-Wire Wire Line
-	4500 950  4750 950 
-Wire Wire Line
-	4750 950  5150 950 
-Wire Wire Line
-	5150 950  5900 950 
-Wire Wire Line
-	5900 950  6550 950 
-Wire Wire Line
-	2800 950  3250 950 
-Wire Wire Line
-	3250 950  3350 950 
+	2800 950  3350 950 
 Wire Wire Line
 	2050 950  2300 950 
 Wire Wire Line
 	2050 1850 2050 2100
 Wire Wire Line
-	3250 700  3250 950 
-Wire Wire Line
-	3250 950  3250 1200
+	3250 700  3250 1200
 Connection ~ 3250 950 
 Wire Wire Line
 	3350 950  3350 1200
@@ -388,23 +372,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 1600 4000 2700
 Wire Wire Line
-	2050 2100 2550 2100
-Wire Wire Line
-	2550 2100 4500 2100
-Wire Wire Line
-	4500 2100 4750 2100
-Wire Wire Line
-	4750 2100 5150 2100
-Wire Wire Line
-	5150 2100 5500 2100
-Wire Wire Line
-	5500 2100 5900 2100
-Wire Wire Line
-	5900 2100 6850 2100
-Wire Wire Line
-	6850 2100 7650 2100
-Wire Wire Line
-	7650 2100 7900 2100
+	2050 2100 7900 2100
 Wire Wire Line
 	3550 2000 3550 2300
 Wire Wire Line
@@ -412,7 +380,14 @@ Wire Wire Line
 Wire Wire Line
 	6500 2450 6400 2450
 Text GLabel 2950 700  0    60   Output ~ 0
-PanelVoltageSense
+PanelVoltageSense+
 Wire Wire Line
 	2950 700  3250 700 
+Text GLabel 2950 2300 0    60   Output ~ 0
+PanelVoltageSense-
+Wire Wire Line
+	2950 2300 3150 2300
+Wire Wire Line
+	3150 2300 3150 2100
+Connection ~ 3150 2100
 $EndSCHEMATC
