@@ -1,4 +1,4 @@
-update=Fri 06 Feb 2015 22:00:29 CET
+update=nie, 8 lut 2015, 08:37:52
 version=1
 last_client=kicad
 [pcbnew]
@@ -62,3 +62,4 @@ LibName30=valves
 LibName31=relays
 LibName32=library/library/linear
 LibName33=library/library/device
+LibName34=library/library/sensors
