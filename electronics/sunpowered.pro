@@ -1,4 +1,4 @@
-update=nie, 8 lut 2015, 08:37:52
+update=nie, 8 lut 2015, 12:00:01
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,3 +63,4 @@ LibName31=relays
 LibName32=library/library/linear
 LibName33=library/library/device
 LibName34=library/library/sensors
+LibName35=library/library/nxp_armmcu
