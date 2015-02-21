@@ -1,0 +1,157 @@
+Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sat 21 Feb 2015 14:23:35 CET
+
+BeginCmp
+TimeStamp = /54D74223;
+Reference = C1;
+ValeurCmp = 0.1u;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D76924;
+Reference = C2;
+ValeurCmp = 47n;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D539D0;
+Reference = C3;
+ValeurCmp = 100n;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D53D1F;
+Reference = C4;
+ValeurCmp = 47n;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E900DF;
+Reference = C5;
+ValeurCmp = 4700u;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D5E43B;
+Reference = D1;
+ValeurCmp = 23V;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D52D0F;
+Reference = D2;
+ValeurCmp = 24V;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D53FCE;
+Reference = D3;
+ValeurCmp = 12A;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D5362E;
+Reference = F1;
+ValeurCmp = 8A;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D71B52;
+Reference = IC1;
+ValeurCmp = ACS713;
+IdModule  = Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E8B95C;
+Reference = JP1;
+ValeurCmp = JUMPER3;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E865F8;
+Reference = P1;
+ValeurCmp = CONN_01X02;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E8EADE;
+Reference = P2;
+ValeurCmp = CONN_02X04;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E90EDF;
+Reference = P3;
+ValeurCmp = CONN_01X02;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D70F3D;
+Reference = Q1;
+ValeurCmp = PSMN0R9-30YLD;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D78812;
+Reference = R1;
+ValeurCmp = 220;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D53A8D;
+Reference = R2;
+ValeurCmp = 1k;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D70FF3;
+Reference = R3;
+ValeurCmp = 10k;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D7146D;
+Reference = R4;
+ValeurCmp = 1k;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54E8C723;
+Reference = R5;
+ValeurCmp = 5k;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D5CEC6;
+Reference = SW1;
+ValeurCmp = DPST;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D53E05;
+Reference = T1;
+ValeurCmp = 12A;
+IdModule  = ;
+EndCmp
+
+EndListe
