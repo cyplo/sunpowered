@@ -1,4 +1,4 @@
-update=nie, 8 lut 2015, 12:00:01
+update=Sat 21 Feb 2015 10:27:02 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -64,3 +64,4 @@ LibName32=library/library/linear
 LibName33=library/library/device
 LibName34=library/library/sensors
 LibName35=library/library/nxp_armmcu
+LibName36=library/library/dc-dc
