@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/cyryl/dev/sunpowered/electronics/sunpowered.sch</source>
-    <date>Sun 22 Feb 2015 11:03:24 CET</date>
+    <date>Sun 22 Feb 2015 11:34:40 CET</date>
     <tool>Eeschema 0.201502201246+5434~21~ubuntu14.10.1-product</tool>
   </design>
   <components>
@@ -17,6 +17,7 @@
     </comp>
     <comp ref="F1">
       <value>8A</value>
+      <footprint>Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_open_universal_Type-III</footprint>
       <libsource lib="device" part="FUSE"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54D5362E</tstamp>
@@ -52,6 +53,7 @@
     </comp>
     <comp ref="D2">
       <value>12A</value>
+      <footprint>Diodes_SMD:Diode-SMC_Handsoldering</footprint>
       <datasheet>http://www.vishay.com/docs/89094/v12p12.pdf</datasheet>
       <libsource lib="device" part="DIODESCH"/>
       <sheetpath names="/" tstamps="/"/>
@@ -59,6 +61,7 @@
     </comp>
     <comp ref="Q1">
       <value>PSMN0R9-30YLD</value>
+      <footprint>cyplo's:TO277A</footprint>
       <datasheet>http://www.nxp.com/documents/data_sheet/PSMN0R9-30YLD.pdf</datasheet>
       <libsource lib="device" part="MOS_N"/>
       <sheetpath names="/" tstamps="/"/>
@@ -118,6 +121,7 @@
     </comp>
     <comp ref="P1">
       <value>CONN_01X02</value>
+      <footprint>Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol</footprint>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54E865F8</tstamp>
@@ -145,12 +149,14 @@
     </comp>
     <comp ref="C1">
       <value>4700u</value>
+      <footprint>Capacitors_ThroughHole:Capacitor5x11RM2.5</footprint>
       <libsource lib="device" part="CP2"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54E900DF</tstamp>
     </comp>
     <comp ref="P3">
       <value>CONN_01X02</value>
+      <footprint>Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol</footprint>
       <libsource lib="conn" part="CONN_01X02"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54E90EDF</tstamp>

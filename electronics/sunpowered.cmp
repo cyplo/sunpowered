@@ -1,59 +1,59 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 11:02:01 CET
+Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 11:18:06 CET
+
+BeginCmp
+TimeStamp = /54E900DF;
+Reference = C1;
+ValeurCmp = 4700u;
+IdModule  = Capacitors_ThroughHole:Capacitor5x11RM2.5;
+EndCmp
 
 BeginCmp
 TimeStamp = /54D74223;
-Reference = C1;
+Reference = C2;
 ValeurCmp = 100n;
 IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D76924;
-Reference = C2;
+Reference = C3;
 ValeurCmp = 47n;
 IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D539D0;
-Reference = C3;
+Reference = C4;
 ValeurCmp = 100n;
 IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D53D1F;
-Reference = C4;
+Reference = C5;
 ValeurCmp = 47n;
 IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
-TimeStamp = /54E900DF;
-Reference = C5;
-ValeurCmp = 4700u;
-IdModule  = ;
-EndCmp
-
-BeginCmp
 TimeStamp = /54D52D0F;
-Reference = D2;
+Reference = D1;
 ValeurCmp = 24V;
 IdModule  = Diodes_SMD:Diode-SMC_Handsoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D53FCE;
-Reference = D3;
+Reference = D2;
 ValeurCmp = 12A;
-IdModule  = ;
+IdModule  = Diodes_SMD:Diode-SMC_Handsoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D5362E;
 Reference = F1;
 ValeurCmp = 8A;
-IdModule  = ;
+IdModule  = Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_open_universal_Type-III;
 EndCmp
 
 BeginCmp
@@ -74,7 +74,7 @@ BeginCmp
 TimeStamp = /54E865F8;
 Reference = P1;
 ValeurCmp = CONN_01X02;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol;
 EndCmp
 
 BeginCmp
@@ -88,7 +88,7 @@ BeginCmp
 TimeStamp = /54E90EDF;
 Reference = P3;
 ValeurCmp = CONN_01X02;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol;
 EndCmp
 
 BeginCmp
@@ -113,23 +113,23 @@ IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
-TimeStamp = /54D70FF3;
+TimeStamp = /54E8C723;
 Reference = R3;
+ValeurCmp = 5k;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
+EndCmp
+
+BeginCmp
+TimeStamp = /54D70FF3;
+Reference = R4;
 ValeurCmp = 10k;
 IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D7146D;
-Reference = R4;
-ValeurCmp = 1k;
-IdModule  = Resistors_SMD:R_0603_HandSoldering;
-EndCmp
-
-BeginCmp
-TimeStamp = /54E8C723;
 Reference = R5;
-ValeurCmp = 5k;
+ValeurCmp = 1k;
 IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
