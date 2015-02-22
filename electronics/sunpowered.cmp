@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sat 21 Feb 2015 14:23:35 CET
+Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 09:38:07 CET
 
 BeginCmp
 TimeStamp = /54D74223;
@@ -151,7 +151,7 @@ BeginCmp
 TimeStamp = /54D53E05;
 Reference = T1;
 ValeurCmp = 12A;
-IdModule  = ;
+IdModule  = Transistors_SMD:sot428;
 EndCmp
 
 EndListe

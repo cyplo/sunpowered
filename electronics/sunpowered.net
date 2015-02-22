@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/cyryl/dev/sunpowered/electronics/sunpowered.sch)
-    (date "Sat 21 Feb 2015 14:05:02 CET")
+    (date "Sun 22 Feb 2015 09:38:19 CET")
     (tool "Eeschema 0.201502201246+5434~21~ubuntu14.10.1-product"))
   (components
     (comp (ref D2)
@@ -33,6 +33,7 @@
       (tstamp 54D53D1F))
     (comp (ref T1)
       (value 12A)
+      (footprint Transistors_SMD:sot428)
       (datasheet http://www.nxp.com/documents/data_sheet/BT151S_SER_L_R.pdf)
       (libsource (lib device) (part THYRISTOR))
       (sheetpath (names /) (tstamps /))
@@ -100,6 +101,7 @@
       (tstamp 54E865F8))
     (comp (ref JP1)
       (value JUMPER3)
+      (footprint Pin_Headers:Pin_Header_Straight_1x03)
       (libsource (lib device) (part JUMPER3))
       (sheetpath (names /) (tstamps /))
       (tstamp 54E8B95C))
@@ -110,6 +112,7 @@
       (tstamp 54E8C723))
     (comp (ref P2)
       (value CONN_02X04)
+      (footprint Pin_Headers:Pin_Header_Straight_2x04)
       (libsource (lib conn) (part CONN_02X04))
       (sheetpath (names /) (tstamps /))
       (tstamp 54E8EADE))
@@ -124,26 +127,6 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 54E90EDF)))
   (libparts
-    (libpart (lib device) (part CP2)
-      (footprints
-        (fp SM*)
-        (fp C?)
-        (fp C1-1))
-      (fields
-        (field (name Reference) C)
-        (field (name Value) CP2))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib device) (part THYRISTOR)
-      (description "Diode simple")
-      (fields
-        (field (name Reference) T)
-        (field (name Value) THYRISTOR))
-      (pins
-        (pin (num A) (name A) (type passive))
-        (pin (num G) (name G) (type passive))
-        (pin (num K) (name K) (type passive))))
     (libpart (lib device) (part C)
       (description "Condensateur non polarise")
       (footprints
@@ -156,6 +139,129 @@
       (pins
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part CP2)
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) CP2))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part DIODESCH)
+      (description "Diode schottky")
+      (footprints
+        (fp D?)
+        (fp S*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) DIODESCH))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part DPST)
+      (description "Interrupteur double")
+      (fields
+        (field (name Reference) SW)
+        (field (name Value) DPST))
+      (pins
+        (pin (num 1) (name 1) (type input))
+        (pin (num 2) (name 2) (type input))
+        (pin (num 3) (name 3) (type input))
+        (pin (num 4) (name 4) (type input))))
+    (libpart (lib device) (part FUSE)
+      (fields
+        (field (name Reference) F)
+        (field (name Value) FUSE))
+      (pins
+        (pin (num 1) (name ~) (type input))
+        (pin (num 2) (name ~) (type input))))
+    (libpart (lib device) (part JUMPER3)
+      (fields
+        (field (name Reference) JP)
+        (field (name Value) JUMPER3))
+      (pins
+        (pin (num 1) (name 1) (type passive))
+        (pin (num 2) (name 2) (type passive))
+        (pin (num 3) (name 3) (type passive))))
+    (libpart (lib device) (part MOS_N)
+      (aliases
+        (alias MOSFET_N))
+      (docs transistors/mos/*.*)
+      (fields
+        (field (name Reference) Q)
+        (field (name Value) MOS_N))
+      (pins
+        (pin (num D) (name D) (type passive))
+        (pin (num G) (name G) (type input))
+        (pin (num S) (name S) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part THYRISTOR)
+      (description "Diode simple")
+      (fields
+        (field (name Reference) T)
+        (field (name Value) THYRISTOR))
+      (pins
+        (pin (num A) (name A) (type passive))
+        (pin (num G) (name G) (type passive))
+        (pin (num K) (name K) (type passive))))
+    (libpart (lib device) (part ZENER)
+      (description "Diode zener")
+      (footprints
+        (fp D?)
+        (fp SO*)
+        (fp SM*))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) ZENER))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib conn) (part CONN_01X02)
+      (footprints
+        (fp Pin_Header_Straight_1X02)
+        (fp Pin_Header_Angled_1X02)
+        (fp Socket_Strip_Straight_1X02)
+        (fp Socket_Strip_Angled_1X02))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_01X02))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))))
+    (libpart (lib conn) (part CONN_02X04)
+      (footprints
+        (fp Pin_Header_Straight_2X04)
+        (fp Pin_Header_Angled_2X04)
+        (fp Socket_Strip_Straight_2X04)
+        (fp Socket_Strip_Angled_2X04))
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_02X04))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name P2) (type passive))
+        (pin (num 3) (name P3) (type passive))
+        (pin (num 4) (name P4) (type passive))
+        (pin (num 5) (name P5) (type passive))
+        (pin (num 6) (name P6) (type passive))
+        (pin (num 7) (name P7) (type passive))
+        (pin (num 8) (name P8) (type passive))))
     (libpart (lib sensors) (part ACS713ELCTR-30A-T)
       (aliases
         (alias ACS713))
@@ -176,117 +282,14 @@
         (pin (num 5) (name GND) (type power_in))
         (pin (num 6) (name Filter) (type passive))
         (pin (num 7) (name VIout) (type output))
-        (pin (num 8) (name VCC) (type power_in))))
-    (libpart (lib device) (part DPST)
-      (description "Interrupteur double")
-      (fields
-        (field (name Reference) SW)
-        (field (name Value) DPST))
-      (pins
-        (pin (num 1) (name 1) (type input))
-        (pin (num 2) (name 2) (type input))
-        (pin (num 3) (name 3) (type input))
-        (pin (num 4) (name 4) (type input))))
-    (libpart (lib device) (part JUMPER3)
-      (fields
-        (field (name Reference) JP)
-        (field (name Value) JUMPER3))
-      (pins
-        (pin (num 1) (name 1) (type passive))
-        (pin (num 2) (name 2) (type passive))
-        (pin (num 3) (name 3) (type passive))))
-    (libpart (lib device) (part FUSE)
-      (fields
-        (field (name Reference) F)
-        (field (name Value) FUSE))
-      (pins
-        (pin (num 1) (name ~) (type input))
-        (pin (num 2) (name ~) (type input))))
-    (libpart (lib conn) (part CONN_02X04)
-      (footprints
-        (fp Pin_Header_Straight_2X04)
-        (fp Pin_Header_Angled_2X04)
-        (fp Socket_Strip_Straight_2X04)
-        (fp Socket_Strip_Angled_2X04))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_02X04))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))
-        (pin (num 3) (name P3) (type passive))
-        (pin (num 4) (name P4) (type passive))
-        (pin (num 5) (name P5) (type passive))
-        (pin (num 6) (name P6) (type passive))
-        (pin (num 7) (name P7) (type passive))
-        (pin (num 8) (name P8) (type passive))))
-    (libpart (lib device) (part R)
-      (description Resistance)
-      (footprints
-        (fp R?)
-        (fp SM0603)
-        (fp SM0805)
-        (fp R?-*)
-        (fp SM1206))
-      (fields
-        (field (name Reference) R)
-        (field (name Value) R))
-      (pins
-        (pin (num 1) (name ~) (type passive))
-        (pin (num 2) (name ~) (type passive))))
-    (libpart (lib conn) (part CONN_01X02)
-      (footprints
-        (fp Pin_Header_Straight_1X02)
-        (fp Pin_Header_Angled_1X02)
-        (fp Socket_Strip_Straight_1X02)
-        (fp Socket_Strip_Angled_1X02))
-      (fields
-        (field (name Reference) P)
-        (field (name Value) CONN_01X02))
-      (pins
-        (pin (num 1) (name P1) (type passive))
-        (pin (num 2) (name P2) (type passive))))
-    (libpart (lib device) (part MOS_N)
-      (aliases
-        (alias MOSFET_N))
-      (docs transistors/mos/*.*)
-      (fields
-        (field (name Reference) Q)
-        (field (name Value) MOS_N))
-      (pins
-        (pin (num D) (name D) (type passive))
-        (pin (num G) (name G) (type input))
-        (pin (num S) (name S) (type passive))))
-    (libpart (lib device) (part DIODESCH)
-      (description "Diode schottky")
-      (footprints
-        (fp D?)
-        (fp S*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) DIODESCH))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive))))
-    (libpart (lib device) (part ZENER)
-      (description "Diode zener")
-      (footprints
-        (fp D?)
-        (fp SO*)
-        (fp SM*))
-      (fields
-        (field (name Reference) D)
-        (field (name Value) ZENER))
-      (pins
-        (pin (num 1) (name A) (type passive))
-        (pin (num 2) (name K) (type passive)))))
+        (pin (num 8) (name VCC) (type power_in)))))
   (libraries
-    (library (logical sensors)
-      (uri /home/cyryl/dev/sunpowered/electronics/library/library/sensors.lib))
     (library (logical device)
       (uri /home/cyryl/dev/sunpowered/electronics/library/library/device.lib))
     (library (logical conn)
-      (uri /home/cyryl/dev/sunpowered/electronics/library/library/conn.lib)))
+      (uri /home/cyryl/dev/sunpowered/electronics/library/library/conn.lib))
+    (library (logical sensors)
+      (uri /home/cyryl/dev/sunpowered/electronics/library/library/sensors.lib)))
   (nets
     (net (code 1) (name "Net-(P3-Pad2)")
       (node (ref P3) (pin 2))

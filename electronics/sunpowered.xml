@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/cyryl/dev/sunpowered/electronics/sunpowered.sch</source>
-    <date>Sat 21 Feb 2015 14:05:08 CET</date>
+    <date>Sun 22 Feb 2015 09:27:59 CET</date>
     <tool>Eeschema 0.201502201246+5434~21~ubuntu14.10.1-product</tool>
   </design>
   <components>
@@ -120,6 +120,7 @@
     </comp>
     <comp ref="JP1">
       <value>JUMPER3</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x03</footprint>
       <libsource lib="device" part="JUMPER3"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54E8B95C</tstamp>
@@ -132,6 +133,7 @@
     </comp>
     <comp ref="P2">
       <value>CONN_02X04</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x04</footprint>
       <libsource lib="conn" part="CONN_02X04"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54E8EADE</tstamp>
@@ -150,6 +152,22 @@
     </comp>
   </components>
   <libparts>
+    <libpart lib="device" part="C">
+      <description>Condensateur non polarise</description>
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="device" part="CP2">
       <footprints>
         <fp>SM*</fp>
@@ -159,6 +177,88 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">CP2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="DIODESCH">
+      <description>Diode schottky</description>
+      <footprints>
+        <fp>D?</fp>
+        <fp>S*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODESCH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="DPST">
+      <description>Interrupteur double</description>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">DPST</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+        <pin num="3" name="3" type="input"/>
+        <pin num="4" name="4" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="FUSE">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">FUSE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="JUMPER3">
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">JUMPER3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="MOS_N">
+      <aliases>
+        <alias>MOSFET_N</alias>
+      </aliases>
+      <docs>transistors/mos/*.*</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MOS_N</field>
+      </fields>
+      <pins>
+        <pin num="D" name="D" type="passive"/>
+        <pin num="G" name="G" type="input"/>
+        <pin num="S" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistance</description>
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
@@ -177,20 +277,58 @@
         <pin num="K" name="K" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="C">
-      <description>Condensateur non polarise</description>
+    <libpart lib="device" part="ZENER">
+      <description>Diode zener</description>
       <footprints>
+        <fp>D?</fp>
+        <fp>SO*</fp>
         <fp>SM*</fp>
-        <fp>C?</fp>
-        <fp>C1-1</fp>
       </footprints>
       <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C</field>
+        <field name="Reference">D</field>
+        <field name="Value">ZENER</field>
       </fields>
       <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_02X04">
+      <footprints>
+        <fp>Pin_Header_Straight_2X04</fp>
+        <fp>Pin_Header_Angled_2X04</fp>
+        <fp>Socket_Strip_Straight_2X04</fp>
+        <fp>Socket_Strip_Angled_2X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="sensors" part="ACS713ELCTR-30A-T">
@@ -219,152 +357,16 @@
         <pin num="8" name="VCC" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="device" part="DPST">
-      <description>Interrupteur double</description>
-      <fields>
-        <field name="Reference">SW</field>
-        <field name="Value">DPST</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="input"/>
-        <pin num="2" name="2" type="input"/>
-        <pin num="3" name="3" type="input"/>
-        <pin num="4" name="4" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="JUMPER3">
-      <fields>
-        <field name="Reference">JP</field>
-        <field name="Value">JUMPER3</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-        <pin num="3" name="3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="FUSE">
-      <fields>
-        <field name="Reference">F</field>
-        <field name="Value">FUSE</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="input"/>
-        <pin num="2" name="~" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_02X04">
-      <footprints>
-        <fp>Pin_Header_Straight_2X04</fp>
-        <fp>Pin_Header_Angled_2X04</fp>
-        <fp>Socket_Strip_Straight_2X04</fp>
-        <fp>Socket_Strip_Angled_2X04</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_02X04</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-        <pin num="3" name="P3" type="passive"/>
-        <pin num="4" name="P4" type="passive"/>
-        <pin num="5" name="P5" type="passive"/>
-        <pin num="6" name="P6" type="passive"/>
-        <pin num="7" name="P7" type="passive"/>
-        <pin num="8" name="P8" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="R">
-      <description>Resistance</description>
-      <footprints>
-        <fp>R?</fp>
-        <fp>SM0603</fp>
-        <fp>SM0805</fp>
-        <fp>R?-*</fp>
-        <fp>SM1206</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="conn" part="CONN_01X02">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_01X02</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="MOS_N">
-      <aliases>
-        <alias>MOSFET_N</alias>
-      </aliases>
-      <docs>transistors/mos/*.*</docs>
-      <fields>
-        <field name="Reference">Q</field>
-        <field name="Value">MOS_N</field>
-      </fields>
-      <pins>
-        <pin num="D" name="D" type="passive"/>
-        <pin num="G" name="G" type="input"/>
-        <pin num="S" name="S" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="DIODESCH">
-      <description>Diode schottky</description>
-      <footprints>
-        <fp>D?</fp>
-        <fp>S*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">DIODESCH</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="device" part="ZENER">
-      <description>Diode zener</description>
-      <footprints>
-        <fp>D?</fp>
-        <fp>SO*</fp>
-        <fp>SM*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">ZENER</field>
-      </fields>
-      <pins>
-        <pin num="1" name="A" type="passive"/>
-        <pin num="2" name="K" type="passive"/>
-      </pins>
-    </libpart>
   </libparts>
   <libraries>
-    <library logical="sensors">
-      <uri>/home/cyryl/dev/sunpowered/electronics/library/library/sensors.lib</uri>
-    </library>
     <library logical="device">
       <uri>/home/cyryl/dev/sunpowered/electronics/library/library/device.lib</uri>
     </library>
     <library logical="conn">
       <uri>/home/cyryl/dev/sunpowered/electronics/library/library/conn.lib</uri>
+    </library>
+    <library logical="sensors">
+      <uri>/home/cyryl/dev/sunpowered/electronics/library/library/sensors.lib</uri>
     </library>
   </libraries>
   <nets>
