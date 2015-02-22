@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/cyryl/dev/sunpowered/electronics/sunpowered.sch</source>
-    <date>Sun 22 Feb 2015 09:27:59 CET</date>
+    <date>Sun 22 Feb 2015 10:05:13 CET</date>
     <tool>Eeschema 0.201502201246+5434~21~ubuntu14.10.1-product</tool>
   </design>
   <components>
@@ -28,6 +28,7 @@
     </comp>
     <comp ref="R2">
       <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54D53A8D</tstamp>
@@ -40,6 +41,7 @@
     </comp>
     <comp ref="T1">
       <value>12A</value>
+      <footprint>Transistors_SMD:sot428</footprint>
       <datasheet>http://www.nxp.com/documents/data_sheet/BT151S_SER_L_R.pdf</datasheet>
       <libsource lib="device" part="THYRISTOR"/>
       <sheetpath names="/" tstamps="/"/>
@@ -67,18 +69,20 @@
     </comp>
     <comp ref="R3">
       <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54D70FF3</tstamp>
     </comp>
     <comp ref="R4">
       <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54D7146D</tstamp>
     </comp>
     <comp ref="C1">
-      <value>0.1u</value>
+      <value>100n</value>
       <libsource lib="device" part="C"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54D74223</tstamp>
@@ -96,7 +100,8 @@
       <tstamp>54D76924</tstamp>
     </comp>
     <comp ref="R1">
-      <value>220</value>
+      <value>330</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54D78812</tstamp>
@@ -127,6 +132,7 @@
     </comp>
     <comp ref="R5">
       <value>5k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54E8C723</tstamp>

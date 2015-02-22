@@ -1,31 +1,31 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 09:38:07 CET
+Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 10:11:13 CET
 
 BeginCmp
 TimeStamp = /54D74223;
 Reference = C1;
-ValeurCmp = 0.1u;
-IdModule  = ;
+ValeurCmp = 100n;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D76924;
 Reference = C2;
 ValeurCmp = 47n;
-IdModule  = ;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D539D0;
 Reference = C3;
 ValeurCmp = 100n;
-IdModule  = ;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D53D1F;
 Reference = C4;
 ValeurCmp = 47n;
-IdModule  = ;
+IdModule  = Capacitors_SMD:C_0603_HandSoldering;
 EndCmp
 
 BeginCmp
@@ -108,36 +108,36 @@ EndCmp
 BeginCmp
 TimeStamp = /54D78812;
 Reference = R1;
-ValeurCmp = 220;
-IdModule  = ;
+ValeurCmp = 330;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D53A8D;
 Reference = R2;
 ValeurCmp = 1k;
-IdModule  = ;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D70FF3;
 Reference = R3;
 ValeurCmp = 10k;
-IdModule  = ;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54D7146D;
 Reference = R4;
 ValeurCmp = 1k;
-IdModule  = ;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
 TimeStamp = /54E8C723;
 Reference = R5;
 ValeurCmp = 5k;
-IdModule  = ;
+IdModule  = Resistors_SMD:R_0603_HandSoldering;
 EndCmp
 
 BeginCmp
