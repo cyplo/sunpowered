@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 10:11:13 CET
+Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 11:02:01 CET
 
 BeginCmp
 TimeStamp = /54D74223;
@@ -36,17 +36,10 @@ IdModule  = ;
 EndCmp
 
 BeginCmp
-TimeStamp = /54D5E43B;
-Reference = D1;
-ValeurCmp = 23V;
-IdModule  = ;
-EndCmp
-
-BeginCmp
 TimeStamp = /54D52D0F;
 Reference = D2;
 ValeurCmp = 24V;
-IdModule  = ;
+IdModule  = Diodes_SMD:Diode-SMC_Handsoldering;
 EndCmp
 
 BeginCmp
