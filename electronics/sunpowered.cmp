@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sun 22 Feb 2015 11:18:06 CET
+Cmp-Mod V01 Created by Cvpcb 0.201502201246+5434~21~ubuntu14.10.1-product   date = Sat 28 Feb 2015 18:53:10 CET
 
 BeginCmp
 TimeStamp = /54E900DF;
@@ -46,7 +46,7 @@ BeginCmp
 TimeStamp = /54D53FCE;
 Reference = D2;
 ValeurCmp = 12A;
-IdModule  = Diodes_SMD:Diode-SMC_Handsoldering;
+IdModule  = cyplo's:TO277A;
 EndCmp
 
 BeginCmp
@@ -95,7 +95,7 @@ BeginCmp
 TimeStamp = /54D70F3D;
 Reference = Q1;
 ValeurCmp = PSMN0R9-30YLD;
-IdModule  = ;
+IdModule  = cyplo's:LFPAK56;
 EndCmp
 
 BeginCmp
@@ -131,13 +131,6 @@ TimeStamp = /54D7146D;
 Reference = R5;
 ValeurCmp = 1k;
 IdModule  = Resistors_SMD:R_0603_HandSoldering;
-EndCmp
-
-BeginCmp
-TimeStamp = /54D5CEC6;
-Reference = SW1;
-ValeurCmp = DPST;
-IdModule  = ;
 EndCmp
 
 BeginCmp

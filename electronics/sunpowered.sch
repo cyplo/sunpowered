@@ -121,7 +121,7 @@ U 1 1 54D53FCE
 P 8200 1550
 F 0 "D2" H 8200 1650 50  0000 C CNN
 F 1 "12A" H 8200 1450 50  0000 C CNN
-F 2 "Diodes_SMD:Diode-SMC_Handsoldering" H 8200 1550 60  0001 C CNN
+F 2 "cyplo's:TO277A" H 8200 1550 60  0001 C CNN
 F 3 "http://www.vishay.com/docs/89094/v12p12.pdf" H 8200 1550 60  0001 C CNN
 	1    8200 1550
 	1    0    0    -1  
@@ -132,7 +132,7 @@ U 1 1 54D70F3D
 P 9300 2400
 F 0 "Q1" H 9250 2250 50  0000 R CNN
 F 1 "PSMN0R9-30YLD" V 9500 2650 50  0000 R CNN
-F 2 "cyplo's:TO277A" H 9300 2400 60  0001 C CNN
+F 2 "cyplo's:LFPAK56" H 9300 2400 60  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/PSMN0R9-30YLD.pdf" H 9300 2400 60  0001 C CNN
 	1    9300 2400
 	1    0    0    -1  
@@ -168,17 +168,6 @@ F 1 "100n" H 4300 2250 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4638 2100 30  0001 C CNN
 F 3 "" H 4600 2250 60  0000 C CNN
 	1    4600 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L DPST SW1
-U 1 1 54D5CEC6
-P 3300 2400
-F 0 "SW1" H 3600 2450 50  0000 C CNN
-F 1 "DPST" H 3600 2350 50  0001 C CNN
-F 2 "" H 3300 2400 60  0001 C CNN
-F 3 "" H 3300 2400 60  0000 C CNN
-	1    3300 2400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -546,4 +535,8 @@ F 3 "" H 4600 1950 60  0000 C CNN
 	1    4600 1950
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3800 2200 2800 2200
+Wire Wire Line
+	2800 2600 3800 2600
 $EndSCHEMATC
