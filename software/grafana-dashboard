@@ -306,7 +306,10 @@
       "height": "250px",
       "panels": [
         {
-          "aliasColors": {},
+          "aliasColors": {
+            "power usage": "#6ED0E0",
+            "CPU": "#F29191"
+          },
           "bars": false,
           "datasource": null,
           "editable": true,
@@ -317,7 +320,7 @@
             "leftMax": null,
             "leftMin": null,
             "rightLogBase": 1,
-            "rightMax": 100,
+            "rightMax": null,
             "rightMin": 0,
             "threshold1": null,
             "threshold1Color": "rgba(216, 200, 27, 0.27)",
@@ -394,7 +397,8 @@
         {
           "aliasColors": {
             "ambient temperature": "#70DBED",
-            "core temperature": "#E24D42"
+            "core temperature": "#E24D42",
+            "cpu usage": "#F29191"
           },
           "bars": false,
           "datasource": null,
@@ -690,7 +694,7 @@
           "fill": 1,
           "grid": {
             "leftLogBase": 1,
-            "leftMax": 100,
+            "leftMax": null,
             "leftMin": 0,
             "rightLogBase": 1,
             "rightMax": null,
@@ -782,7 +786,7 @@
             "hideEmpty": true,
             "max": true,
             "min": true,
-            "rightSide": true,
+            "rightSide": false,
             "show": true,
             "total": false,
             "values": true
@@ -846,6 +850,98 @@
         }
       ],
       "title": "New row"
+    },
+    {
+      "title": "New row",
+      "height": "250px",
+      "editable": true,
+      "collapse": false,
+      "panels": [
+        {
+          "title": "Voltages stability",
+          "error": false,
+          "span": 12,
+          "editable": true,
+          "type": "graph",
+          "id": 16,
+          "datasource": null,
+          "renderer": "flot",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ],
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": null,
+            "rightMax": null,
+            "leftMin": null,
+            "rightMin": null,
+            "rightLogBase": 1,
+            "threshold1": null,
+            "threshold2": 5.25,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2Color": "rgba(234, 112, 112, 0.22)",
+            "thresholdLine": false
+          },
+          "lines": true,
+          "fill": 1,
+          "linewidth": 2,
+          "points": false,
+          "pointradius": 5,
+          "bars": false,
+          "stack": false,
+          "percentage": false,
+          "legend": {
+            "show": true,
+            "values": true,
+            "min": true,
+            "max": true,
+            "current": true,
+            "total": false,
+            "avg": true
+          },
+          "nullPointMode": "connected",
+          "steppedLine": false,
+          "tooltip": {
+            "value_type": "cumulative",
+            "shared": true
+          },
+          "timeFrom": null,
+          "timeShift": null,
+          "targets": [
+            {
+              "function": "mean",
+              "column": "5V_rail_voltage",
+              "series": "balcony",
+              "query": "select mean(5V_rail_voltage) from \"balcony\" where $timeFilter group by time($interval) order asc",
+              "alias": "5V rail",
+              "hide": false
+            },
+            {
+              "target": "",
+              "function": "mean",
+              "column": "current_sensor_vcc",
+              "series": "balcony",
+              "query": "select mean(current_sensor_vcc) from \"balcony\" where $timeFilter group by time($interval) order asc",
+              "alias": "current sensor Vcc"
+            }
+          ],
+          "aliasColors": {},
+          "seriesOverrides": [
+            {
+              "alias": "current sensor V",
+              "yaxis": 2
+            },
+            {
+              "alias": "current sensor Vcc",
+              "yaxis": 2
+            }
+          ],
+          "links": []
+        }
+      ]
     }
   ],
   "nav": [
@@ -882,7 +978,7 @@
     }
   ],
   "time": {
-    "from": "now-15m",
+    "from": "now-12h",
     "to": "now"
   },
   "templating": {
@@ -893,5 +989,5 @@
   },
   "refresh": "30s",
   "schemaVersion": 6,
-  "version": 29
+  "version": 36
 }
