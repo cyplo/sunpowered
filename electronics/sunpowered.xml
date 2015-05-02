@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/cyryl/dev/sunpowered/electronics/sunpowered.sch</source>
+    <date>Sun 22 Feb 2015 11:42:39 CET</date>
+    <tool>Eeschema 0.201502201246+5434~21~ubuntu14.10.1-product</tool>
+  </design>
+  <components>
+    <comp ref="D1">
+      <value>24V</value>
+      <footprint>Diodes_SMD:Diode-SMC_Handsoldering</footprint>
+      <datasheet>http://www.comchiptech.com/cms/UserFiles/ACZRC5333B-G%20Thru.%20ACZRC5388B-G%20RevA.pdf</datasheet>
+      <fields/>
+      <libsource lib="device" part="ZENER"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D52D0F</tstamp>
+    </comp>
+    <comp ref="F1">
+      <value>8A</value>
+      <footprint>Fuse_Holders_and_Fuses:Fuseholder5x20_horiz_open_universal_Type-III</footprint>
+      <libsource lib="device" part="FUSE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D5362E</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D539D0</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D53A8D</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D53D1F</tstamp>
+    </comp>
+    <comp ref="T1">
+      <value>12A</value>
+      <footprint>Transistors_SMD:sot428</footprint>
+      <datasheet>http://www.nxp.com/documents/data_sheet/BT151S_SER_L_R.pdf</datasheet>
+      <libsource lib="device" part="THYRISTOR"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D53E05</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>12A</value>
+      <footprint>Diodes_SMD:Diode-SMC_Handsoldering</footprint>
+      <datasheet>http://www.vishay.com/docs/89094/v12p12.pdf</datasheet>
+      <libsource lib="device" part="DIODESCH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D53FCE</tstamp>
+    </comp>
+    <comp ref="Q1">
+      <value>PSMN0R9-30YLD</value>
+      <footprint>cyplo's:TO277A</footprint>
+      <datasheet>http://www.nxp.com/documents/data_sheet/PSMN0R9-30YLD.pdf</datasheet>
+      <libsource lib="device" part="MOS_N"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D70F3D</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>10k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D70FF3</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>1k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D7146D</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100n</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D74223</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>47n</value>
+      <footprint>Capacitors_SMD:C_0603_HandSoldering</footprint>
+      <libsource lib="device" part="C"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D76924</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>330</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D78812</tstamp>
+    </comp>
+    <comp ref="IC1">
+      <value>ACS713</value>
+      <footprint>Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</footprint>
+      <datasheet>http://www.allegromicro.com/en/Products/Part_Numbers/0713/0713.pdf</datasheet>
+      <fields>
+        <field name="Note">Current sensor</field>
+      </fields>
+      <libsource lib="sensors" part="ACS713ELCTR-30A-T"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54D71B52</tstamp>
+    </comp>
+    <comp ref="P1">
+      <value>CONN_01X02</value>
+      <footprint>Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54E865F8</tstamp>
+    </comp>
+    <comp ref="JP1">
+      <value>JUMPER3</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_1x03</footprint>
+      <libsource lib="device" part="JUMPER3"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54E8B95C</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>5k</value>
+      <footprint>Resistors_SMD:R_0603_HandSoldering</footprint>
+      <libsource lib="device" part="R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54E8C723</tstamp>
+    </comp>
+    <comp ref="P2">
+      <value>CONN_02X04</value>
+      <footprint>Pin_Headers:Pin_Header_Straight_2x04</footprint>
+      <libsource lib="conn" part="CONN_02X04"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54E8EADE</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>4700u</value>
+      <footprint>Capacitors_ThroughHole:Capacitor5x11RM2.5</footprint>
+      <libsource lib="device" part="CP2"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54E900DF</tstamp>
+    </comp>
+    <comp ref="P3">
+      <value>CONN_01X02</value>
+      <footprint>Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol</footprint>
+      <libsource lib="conn" part="CONN_01X02"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>54E90EDF</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="device" part="C">
+      <description>Condensateur non polarise</description>
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="CP2">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP2</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="DIODESCH">
+      <description>Diode schottky</description>
+      <footprints>
+        <fp>D?</fp>
+        <fp>S*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">DIODESCH</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="FUSE">
+      <fields>
+        <field name="Reference">F</field>
+        <field name="Value">FUSE</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="input"/>
+        <pin num="2" name="~" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="JUMPER3">
+      <fields>
+        <field name="Reference">JP</field>
+        <field name="Value">JUMPER3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="MOS_N">
+      <aliases>
+        <alias>MOSFET_N</alias>
+      </aliases>
+      <docs>transistors/mos/*.*</docs>
+      <fields>
+        <field name="Reference">Q</field>
+        <field name="Value">MOS_N</field>
+      </fields>
+      <pins>
+        <pin num="D" name="D" type="passive"/>
+        <pin num="G" name="G" type="input"/>
+        <pin num="S" name="S" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="R">
+      <description>Resistance</description>
+      <footprints>
+        <fp>R?</fp>
+        <fp>SM0603</fp>
+        <fp>SM0805</fp>
+        <fp>R?-*</fp>
+        <fp>SM1206</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="THYRISTOR">
+      <description>Diode simple</description>
+      <fields>
+        <field name="Reference">T</field>
+        <field name="Value">THYRISTOR</field>
+      </fields>
+      <pins>
+        <pin num="A" name="A" type="passive"/>
+        <pin num="G" name="G" type="passive"/>
+        <pin num="K" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="device" part="ZENER">
+      <description>Diode zener</description>
+      <footprints>
+        <fp>D?</fp>
+        <fp>SO*</fp>
+        <fp>SM*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">ZENER</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_01X02">
+      <footprints>
+        <fp>Pin_Header_Straight_1X02</fp>
+        <fp>Pin_Header_Angled_1X02</fp>
+        <fp>Socket_Strip_Straight_1X02</fp>
+        <fp>Socket_Strip_Angled_1X02</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_01X02</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="conn" part="CONN_02X04">
+      <footprints>
+        <fp>Pin_Header_Straight_2X04</fp>
+        <fp>Pin_Header_Angled_2X04</fp>
+        <fp>Socket_Strip_Straight_2X04</fp>
+        <fp>Socket_Strip_Angled_2X04</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_02X04</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="sensors" part="ACS713ELCTR-30A-T">
+      <aliases>
+        <alias>ACS713</alias>
+      </aliases>
+      <description>ACS713ELCTR-30A-T, 30A Current Sensor with Hall-Effect Sensor, SOIC-8</description>
+      <footprints>
+        <fp>SOIC-8</fp>
+        <fp>8-SOIC</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">IC</field>
+        <field name="Value">ACS713ELCTR-30A-T</field>
+        <field name="Footprint">Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm</field>
+        <field name="Datasheet">http://www.allegromicro.com/en/Products/Part_Numbers/0713/0713.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IP+" type="passive"/>
+        <pin num="2" name="IP+" type="passive"/>
+        <pin num="3" name="IP-" type="passive"/>
+        <pin num="4" name="IP-" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="Filter" type="passive"/>
+        <pin num="7" name="VIout" type="output"/>
+        <pin num="8" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="device">
+      <uri>/home/cyryl/dev/sunpowered/electronics/library/library/device.lib</uri>
+    </library>
+    <library logical="conn">
+      <uri>/home/cyryl/dev/sunpowered/electronics/library/library/conn.lib</uri>
+    </library>
+    <library logical="sensors">
+      <uri>/home/cyryl/dev/sunpowered/electronics/library/library/sensors.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="PanelVoltageSense+">
+      <node ref="P2" pin="1"/>
+      <node ref="F1" pin="2"/>
+      <node ref="IC1" pin="2"/>
+      <node ref="IC1" pin="1"/>
+    </net>
+    <net code="2" name="Net-(JP1-Pad2)">
+      <node ref="R4" pin="1"/>
+      <node ref="JP1" pin="2"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="3" name="PanelCurrentSense">
+      <node ref="IC1" pin="7"/>
+      <node ref="P2" pin="7"/>
+    </net>
+    <net code="4" name="Net-(F1-Pad1)">
+      <node ref="F1" pin="1"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="5" name="Net-(C5-Pad1)">
+      <node ref="D1" pin="1"/>
+      <node ref="T1" pin="G"/>
+      <node ref="R2" pin="1"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="6" name="Net-(P3-Pad2)">
+      <node ref="P3" pin="2"/>
+      <node ref="Q1" pin="D"/>
+    </net>
+    <net code="7" name="Net-(D2-Pad2)">
+      <node ref="P3" pin="1"/>
+      <node ref="D2" pin="2"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="8" name="+5V">
+      <node ref="R1" pin="2"/>
+      <node ref="C1" pin="1"/>
+      <node ref="P2" pin="6"/>
+    </net>
+    <net code="9" name="Net-(C2-Pad1)">
+      <node ref="C2" pin="1"/>
+      <node ref="IC1" pin="8"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="10" name="GNDD">
+      <node ref="IC1" pin="5"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="P2" pin="8"/>
+      <node ref="C1" pin="2"/>
+    </net>
+    <net code="11" name="Net-(JP1-Pad3)">
+      <node ref="JP1" pin="3"/>
+      <node ref="R3" pin="2"/>
+    </net>
+    <net code="12" name="Net-(C3-Pad2)">
+      <node ref="IC1" pin="6"/>
+      <node ref="C3" pin="2"/>
+    </net>
+    <net code="13" name="PowerOn">
+      <node ref="JP1" pin="1"/>
+      <node ref="P2" pin="5"/>
+    </net>
+    <net code="14" name="Net-(Q1-PadG)">
+      <node ref="Q1" pin="G"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="15" name="Net-(C4-Pad1)">
+      <node ref="D2" pin="1"/>
+      <node ref="IC1" pin="4"/>
+      <node ref="T1" pin="A"/>
+      <node ref="IC1" pin="3"/>
+      <node ref="D1" pin="2"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="16" name="PanelVoltageSense-">
+      <node ref="R4" pin="2"/>
+      <node ref="Q1" pin="S"/>
+      <node ref="P1" pin="1"/>
+      <node ref="C4" pin="2"/>
+      <node ref="P2" pin="2"/>
+      <node ref="R2" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="T1" pin="K"/>
+    </net>
+    <net code="17" name="Net-(P2-Pad3)">
+      <node ref="P2" pin="3"/>
+    </net>
+    <net code="18" name="Net-(P2-Pad4)">
+      <node ref="P2" pin="4"/>
+    </net>
+  </nets>
+</export>

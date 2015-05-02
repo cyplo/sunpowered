@@ -1,0 +1,3 @@
+[submodule "electronics/library"]
+	path = electronics/library
+	url = git@github.com:cyplo/kicad-library.git
