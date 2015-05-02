@@ -79,15 +79,20 @@ def measure():
     measurements['core_temp'] = temp
     measurements['cpu_percent']=psutil.cpu_percent(interval=1)
     measurements['memory_percent']=psutil.virtual_memory().percent
+    io_bytes_read_start=psutil.disk_io_counters().read_bytes
+    io_bytes_write_start=psutil.disk_io_counters().write_bytes
     sent_start=psutil.net_io_counters().bytes_sent;
-    time.sleep(1);
-    sent_end=psutil.net_io_counters().bytes_sent
-    measurements['network_out_bytes_1s']=sent_end-sent_start
     received_start=psutil.net_io_counters().bytes_recv;
     time.sleep(1);
+    io_bytes_read_end=psutil.disk_io_counters().read_bytes
+    io_bytes_write_end=psutil.disk_io_counters().write_bytes
+    sent_end=psutil.net_io_counters().bytes_sent
     received_end=psutil.net_io_counters().bytes_recv
     measurements['network_in_bytes_1s']=received_end-received_start
-
+    measurements['network_out_bytes_1s']=sent_end-sent_start
+    measurements['disk_read_bytes_1s']=io_bytes_read_end-io_bytes_read_start
+    measurements['disk_write_bytes_1s']=io_bytes_write_end-io_bytes_write_start
+    
     global ambient_temperature
     global last_weather_call
     if time.time() - last_weather_call >  weather_call_interval:
