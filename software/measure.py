@@ -55,44 +55,8 @@ def measure_raw():
     
     return values
 
-# TODO: refactor this mess
-def measure():
-    raw_values = measure_raw()
-
-    measurements = {}
-
-    measurements['current_sensor_vcc'] = raw_values[1] 
-    measurements['panel_voltage']      = raw_values[2]
-    measurements['battery_voltage']    = raw_values[3]
-    measurements['load_voltage']       = raw_values[4] 
-    measurements['5V_rail_voltage'] = raw_values[5]
-    measurements['current_sensor_voltage_raw'] = raw_values[7] 
-    measurements['current_sensor_voltage_offset'] = measurements['current_sensor_vcc'] / 2
-    measurements['current_sensor_voltage'] = measurements['current_sensor_voltage_raw'] - measurements['current_sensor_voltage_offset']
-    measurements['load_current']    = measurements['current_sensor_voltage'] / 0.185
-    measurements['load_power_usage'] = measurements['load_voltage'] * measurements['load_current']
-    measurements['timestamp'] = time.time()
-    thermometer = open('/sys/class/thermal/thermal_zone0/temp', 'r')
-    tempText = thermometer.read() 
-    thermometer.close()
-    temp = float(tempText) / 1000
-    measurements['core_temp'] = temp
-    measurements['cpu_percent']=psutil.cpu_percent(interval=1)
-    measurements['memory_percent']=psutil.virtual_memory().percent
-    io_bytes_read_start=psutil.disk_io_counters().read_bytes
-    io_bytes_write_start=psutil.disk_io_counters().write_bytes
-    sent_start=psutil.net_io_counters().bytes_sent;
-    received_start=psutil.net_io_counters().bytes_recv;
-    time.sleep(1);
-    io_bytes_read_end=psutil.disk_io_counters().read_bytes
-    io_bytes_write_end=psutil.disk_io_counters().write_bytes
-    sent_end=psutil.net_io_counters().bytes_sent
-    received_end=psutil.net_io_counters().bytes_recv
-    measurements['network_in_bytes_1s']=received_end-received_start
-    measurements['network_out_bytes_1s']=sent_end-sent_start
-    measurements['disk_read_bytes_1s']=io_bytes_read_end-io_bytes_read_start
-    measurements['disk_write_bytes_1s']=io_bytes_write_end-io_bytes_write_start
-    
+def measure_ambient_temperature(measurements):
+	
     global ambient_temperature
     global last_weather_call
     if time.time() - last_weather_call >  weather_call_interval:
@@ -116,5 +80,52 @@ def measure():
         f.close() 
 
     measurements['ambient_temperature'] = ambient_temperature
+
+def measure_io(measurements):
+    disk_name='md0'
+    io_bytes_read_start=psutil.disk_io_counters(True)[disk_name].read_bytes
+    io_bytes_write_start=psutil.disk_io_counters(True)[disk_name].write_bytes
+    sent_start=psutil.net_io_counters().bytes_sent;
+    received_start=psutil.net_io_counters().bytes_recv;
+    time.sleep(1);
+    io_bytes_read_end=psutil.disk_io_counters(True)[disk_name].read_bytes
+    io_bytes_write_end=psutil.disk_io_counters(True)[disk_name].write_bytes
+    sent_end=psutil.net_io_counters().bytes_sent
+    received_end=psutil.net_io_counters().bytes_recv
+    measurements['network_in_bytes_1s']=received_end-received_start
+    measurements['network_out_bytes_1s']=sent_end-sent_start
+    measurements['disk_read_bytes_1s']=io_bytes_read_end-io_bytes_read_start
+    measurements['disk_write_bytes_1s']=io_bytes_write_end-io_bytes_write_start
+
+def measure_electric_values(measurements):
+    raw_values = measure_raw()
+
+    measurements['current_sensor_vcc'] = raw_values[1] 
+    measurements['panel_voltage']      = raw_values[2]
+    measurements['battery_voltage']    = raw_values[3]
+    measurements['load_voltage']       = raw_values[4] 
+    measurements['5V_rail_voltage'] = raw_values[5]
+    measurements['current_sensor_voltage_raw'] = raw_values[7] 
+    measurements['current_sensor_voltage_offset'] = measurements['current_sensor_vcc'] / 2
+    measurements['current_sensor_voltage'] = measurements['current_sensor_voltage_raw'] - measurements['current_sensor_voltage_offset']
+    measurements['load_current']    = measurements['current_sensor_voltage'] / 0.185
+    measurements['load_power_usage'] = measurements['load_voltage'] * measurements['load_current']
+    measurements['timestamp'] = time.time()
+
+def measure_core_temperature(measurements):
+    thermometer = open('/sys/class/thermal/thermal_zone0/temp', 'r')
+    tempText = thermometer.read() 
+    thermometer.close()
+    temp = float(tempText) / 1000
+    measurements['core_temp'] = temp
+
+def measure():
+    measurements = {}
+    measure_electric_values(measurements)
+    measurements['cpu_percent']=psutil.cpu_percent(interval=1)
+    measurements['memory_percent']=psutil.virtual_memory().percent
+    measure_io(measurements)
+    measure_ambient_temperature(measurements) 
+    measure_core_temperature(measurements)
     return measurements
 
