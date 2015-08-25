@@ -110,7 +110,7 @@ U 1 1 54D53E05
 P 7650 2250
 F 0 "T1" V 7650 2350 50  0000 C CNN
 F 1 "12A" V 7650 2100 50  0000 C CNN
-F 2 "Transistors_SMD:sot428" H 7650 2250 60  0001 C CNN
+F 2 "cyplo's:sot428" H 7650 2250 60  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/BT151S_SER_L_R.pdf" H 7650 2250 60  0001 C CNN
 	1    7650 2250
 	0    -1   1    0   
@@ -231,9 +231,9 @@ Text GLabel 3050 4300 0    60   Input ~ 0
 PanelCurrentSense
 Text GLabel 3050 4100 0    60   Output ~ 0
 PowerOn
-Text GLabel 3750 3650 2    60   Input ~ 0
+Text GLabel 3000 3900 0    60   Input ~ 0
 PanelVoltageSense-
-Text GLabel 3050 3900 0    60   Input ~ 0
+Text GLabel 3000 3700 0    60   Input ~ 0
 PanelVoltageSense+
 $Comp
 L JUMPER3 JP1
@@ -329,8 +329,6 @@ F 3 "" H 9850 1600 60  0000 C CNN
 	1    9850 1600
 	1    0    0    -1  
 $EndComp
-NoConn ~ 3750 4000
-NoConn ~ 3250 4000
 $Comp
 L PWR_FLAG #FLG04
 U 1 1 54E921B9
@@ -369,7 +367,7 @@ L +5V #PWR07
 U 1 1 54E9585A
 P 4000 1850
 F 0 "#PWR07" H 4000 1700 60  0001 C CNN
-F 1 "+5V" H 4000 1990 60  0001 C CNN
+F 1 "+5V" H 4000 1990 60  0000 C CNN
 F 2 "" H 4000 1850 60  0000 C CNN
 F 3 "" H 4000 1850 60  0000 C CNN
 	1    4000 1850
@@ -404,8 +402,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 1550 4050 1550
 Wire Wire Line
-	3800 2600 3800 2900
-Wire Wire Line
 	4950 1300 4950 1550
 Connection ~ 4950 1550
 Wire Wire Line
@@ -431,7 +427,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 2200 2800 2350
 Wire Wire Line
-	2800 2450 2800 2600
+	2800 2450 2800 2900
 Wire Wire Line
 	8400 1550 9650 1550
 Connection ~ 8400 1550
@@ -445,7 +441,7 @@ Connection ~ 4550 2900
 Wire Wire Line
 	4550 3050 4150 3050
 Wire Wire Line
-	3800 2900 9400 2900
+	2800 2900 9400 2900
 Wire Wire Line
 	8400 2050 8400 2150
 Wire Wire Line
@@ -455,10 +451,6 @@ Wire Wire Line
 Wire Wire Line
 	5750 2400 5650 2400
 Connection ~ 5750 2400
-Wire Wire Line
-	3250 3900 3050 3900
-Wire Wire Line
-	3750 3650 3750 3900
 Wire Wire Line
 	3050 4100 3250 4100
 Wire Wire Line
@@ -538,5 +530,43 @@ $EndComp
 Wire Wire Line
 	3800 2200 2800 2200
 Wire Wire Line
-	2800 2600 3800 2600
+	4750 1950 4750 2750
+Wire Wire Line
+	4750 2750 4450 2750
+Text GLabel 4450 2750 0    60   Output ~ 0
+CurrentSensorVoltageSense
+Text GLabel 4000 3800 2    60   Input ~ 0
+CurrentSensorVoltageSense
+Wire Wire Line
+	3850 3800 3850 4000
+Wire Wire Line
+	3850 4000 3750 4000
+Wire Wire Line
+	3850 3800 4000 3800
+Wire Wire Line
+	3750 3500 3750 3900
+$Comp
+L GNDD #PWR012
+U 1 1 55DCC714
+P 4150 3500
+F 0 "#PWR012" H 4150 3250 60  0001 C CNN
+F 1 "GNDD" H 4150 3350 60  0000 C CNN
+F 2 "" H 4150 3500 60  0000 C CNN
+F 3 "" H 4150 3500 60  0000 C CNN
+	1    4150 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3500 3750 3500
+Wire Wire Line
+	3000 3900 3150 3900
+Wire Wire Line
+	3250 3900 3250 3700
+Wire Wire Line
+	3250 3700 3000 3700
+Wire Wire Line
+	3150 3900 3150 4000
+Wire Wire Line
+	3150 4000 3250 4000
+Connection ~ 4750 1950
 $EndSCHEMATC
