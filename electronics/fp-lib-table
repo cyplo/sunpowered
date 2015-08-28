@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name cyplo's)(type KiCad)(uri ${KIPRJMOD}/custom.pretty)(options "")(descr ""))
+  (lib (name ab2_idc)(type Legacy)(uri ${KIPRJMOD}/ab2tech_library/modules/ab2_idc.mod)(options "")(descr ""))
 )
