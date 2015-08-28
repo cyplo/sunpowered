@@ -1,3 +1,6 @@
 [submodule "electronics/library"]
 	path = electronics/library
 	url = git@github.com:cyplo/kicad-library.git
+[submodule "electronics/ab2tech_library"]
+	path = electronics/ab2tech_library
+	url = https://github.com/ab2tech/KiCad.git
