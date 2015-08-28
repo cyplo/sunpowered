@@ -52,6 +52,6 @@ $Sheet
 S 1050 1000 2050 1650
 U 55E0BF75
 F0 "Input Measurement And Protection" 60
-F1 "input_boardsch.sch" 60
+F1 "input_board.sch" 60
 $EndSheet
 $EndSCHEMATC
