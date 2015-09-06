@@ -39,7 +39,7 @@ $EndSheet
 $Sheet
 S 4650 1000 1800 1650
 U 55EBECF9
-F0 "5V Power Supply" 60
+F0 "5V 3A Power Supply" 60
 F1 "5V_power.sch" 60
 F2 "RawPositive" I L 4650 1200 60 
 F3 "RawGround" I L 4650 1400 60 

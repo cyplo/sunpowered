@@ -1,4 +1,4 @@
-update=Sun 06 Sep 2015 10:39:56 CEST
+update=Sun 06 Sep 2015 11:05:37 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -43,3 +43,13 @@ LibName11=xilinx
 LibName12=library/library/regul
 LibName13=library/library/dc-dc
 LibName14=library/library/device
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=schematics
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
