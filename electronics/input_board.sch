@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -33,7 +32,11 @@ LIBS:relays
 LIBS:sensors
 LIBS:nxp_armmcu
 LIBS:dc-dc
-LIBS:sunpowered-cache
+LIBS:powerint
+LIBS:Power_Management
+LIBS:ab2_connectivity
+LIBS:ab2_idc
+LIBS:ab2_terminal_block
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -114,28 +117,6 @@ F 2 "cyplo's:sot428" H 6500 2000 60  0001 C CNN
 F 3 "http://www.nxp.com/documents/data_sheet/BT151S_SER_L_R.pdf" H 6500 2000 60  0001 C CNN
 	1    6500 2000
 	0    -1   -1   0   
-$EndComp
-$Comp
-L DIODESCH D2
-U 1 1 55E0D9FF
-P 7050 1300
-F 0 "D2" H 7050 1400 50  0000 C CNN
-F 1 "12A" H 7050 1200 50  0000 C CNN
-F 2 "cyplo's:TO277A" H 7050 1300 60  0001 C CNN
-F 3 "http://www.vishay.com/docs/89094/v12p12.pdf" H 7050 1300 60  0001 C CNN
-	1    7050 1300
-	1    0    0    -1  
-$EndComp
-$Comp
-L MOS_N Q1
-U 1 1 55E0DA06
-P 8150 2150
-F 0 "Q1" H 8100 2000 50  0000 R CNN
-F 1 "PSMN0R9-30YLD" V 8350 2400 50  0000 R CNN
-F 2 "cyplo's:LFPAK56" H 8150 2150 60  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/PSMN0R9-30YLD.pdf" H 8150 2150 60  0001 C CNN
-	1    8150 2150
-	1    0    0    -1  
 $EndComp
 $Comp
 L R R4
@@ -360,10 +341,8 @@ Wire Wire Line
 Wire Wire Line
 	1650 2200 1650 2650
 Wire Wire Line
-	7250 1300 8500 1300
+	7200 1300 8500 1300
 Connection ~ 7250 1300
-Wire Wire Line
-	7250 2400 7250 3000
 Wire Wire Line
 	7250 3000 7200 3000
 Wire Wire Line
@@ -387,7 +366,7 @@ Wire Wire Line
 Wire Wire Line
 	4600 1700 4400 1700
 Wire Wire Line
-	4100 1300 6850 1300
+	4100 1300 6900 1300
 Wire Wire Line
 	3250 1700 3600 1700
 Wire Wire Line
@@ -432,23 +411,12 @@ CurrentSensorVoltageSense
 Connection ~ 3600 1700
 Text GLabel 2500 4650 3    60   Input ~ 0
 PanelCurrentSense
-Text GLabel 1150 3900 2    60   Output ~ 0
+Text GLabel 1550 3900 0    60   Output ~ 0
 PowerOn
 Text GLabel 2300 4650 3    60   Input ~ 0
 PanelVoltageSense-
 Text GLabel 2850 4650 3    60   Input ~ 0
 PanelVoltageSense+
-$Comp
-L CP2 C1
-U 1 1 55E0DF59
-P 3050 4100
-F 0 "C1" H 2850 4100 50  0000 L CNN
-F 1 "4700u" H 3150 4100 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Radial_D13_L25_P5" H 3088 3950 30  0001 C CNN
-F 3 "" H 3050 4100 60  0000 C CNN
-	1    3050 4100
-	1    0    0    -1  
-$EndComp
 $Comp
 L +5V #PWR07
 U 1 1 55E0DF60
@@ -474,17 +442,6 @@ F 3 "" H 3050 3900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3050 3900
-$Comp
-L GNDD #PWR09
-U 1 1 55E0DF6E
-P 3050 4300
-F 0 "#PWR09" H 3050 4050 60  0001 C CNN
-F 1 "GNDD" H 3050 4150 60  0000 C CNN
-F 2 "" H 3050 4300 60  0000 C CNN
-F 3 "" H 3050 4300 60  0000 C CNN
-	1    3050 4300
-	1    0    0    -1  
-$EndComp
 Text GLabel 2650 4650 3    60   Input ~ 0
 CurrentSensorVoltageSense
 $Comp
@@ -493,7 +450,7 @@ U 1 1 55E0DF75
 P 1950 4100
 F 0 "P2" H 1950 4400 50  0000 C CNN
 F 1 "CONN_02X05" H 1800 4500 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 1950 2900 60  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 1950 2900 60  0001 C CNN
 F 3 "" H 1950 2900 60  0000 C CNN
 	1    1950 4100
 	1    0    0    -1  
@@ -503,24 +460,20 @@ Connection ~ 1700 4200
 Connection ~ 1700 4100
 Connection ~ 1700 4000
 $Comp
-L GNDD #PWR010
+L GNDD #PWR09
 U 1 1 55E0DF80
-P 1700 4450
-F 0 "#PWR010" H 1700 4200 60  0001 C CNN
-F 1 "GNDD" H 1700 4300 60  0000 C CNN
-F 2 "" H 1700 4450 60  0000 C CNN
-F 3 "" H 1700 4450 60  0000 C CNN
-	1    1700 4450
+P 1700 4550
+F 0 "#PWR09" H 1700 4300 60  0001 C CNN
+F 1 "GNDD" H 1700 4400 60  0000 C CNN
+F 2 "" H 1700 4550 60  0000 C CNN
+F 3 "" H 1700 4550 60  0000 C CNN
+	1    1700 4550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2850 4000 2850 4650
 Wire Wire Line
 	2200 4000 2850 4000
-Wire Wire Line
-	1700 4000 1700 4450
-Wire Wire Line
-	1600 3900 1700 3900
 Wire Wire Line
 	2650 4100 2650 4650
 Wire Wire Line
@@ -564,4 +517,49 @@ Text GLabel 2200 3850 1    60   BiDi ~ 0
 Wire Wire Line
 	2200 3850 2200 3900
 Connection ~ 2200 3900
+$Comp
+L D_Schottky D2
+U 1 1 55EBE3EF
+P 7050 1300
+F 0 "D2" H 7050 1400 50  0000 C CNN
+F 1 "12A" H 7050 1200 50  0000 C CNN
+F 2 "cyplo's:TO277A" H 7050 1300 60  0001 C CNN
+F 3 "http://www.vishay.com/docs/89094/v12p12.pdf" H 7050 1300 60  0001 C CNN
+	1    7050 1300
+	-1   0    0    1   
+$EndComp
+$Comp
+L Q_NMOS_SGD Q1
+U 1 1 55EBE70C
+P 8150 2150
+F 0 "Q1" H 8450 2200 50  0000 R CNN
+F 1 "Q_NMOS_SGD" H 8800 2100 50  0000 R CNN
+F 2 "cyplo's:LFPAK56" H 8350 2250 29  0001 C CNN
+F 3 "http://www.nxp.com/documents/data_sheet/PSMN0R9-30YLD.pdf" H 8150 2150 60  0001 C CNN
+	1    8150 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 55EBF3A1
+P 7900 2400
+F 0 "C1" H 7950 2500 50  0000 L CNN
+F 1 "10u" H 7950 2300 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 7938 2250 30  0001 C CNN
+F 3 "" H 7900 2400 60  0000 C CNN
+	1    7900 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 2550 7900 2650
+Connection ~ 7900 2650
+Wire Wire Line
+	7900 2250 7900 2150
+Connection ~ 7900 2150
+Wire Wire Line
+	7250 3000 7250 2400
+Wire Wire Line
+	1700 3900 1550 3900
+Wire Wire Line
+	1700 4000 1700 4550
 $EndSCHEMATC

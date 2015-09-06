@@ -1,4 +1,4 @@
-update=Sat 21 Feb 2015 10:27:02 CET
+update=Sat 29 Aug 2015 13:53:16 CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -27,7 +27,7 @@ NetIExt=net
 version=1
 [eeschema]
 version=1
-LibDir=library/library;library/modules
+LibDir=library/library;library/modules;ab2tech_library/library;ab2tech_library/modules
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -65,3 +65,10 @@ LibName33=library/library/device
 LibName34=library/library/sensors
 LibName35=library/library/nxp_armmcu
 LibName36=library/library/dc-dc
+LibName37=library/library/conn
+LibName38=library/library/power
+LibName39=library/library/powerint
+LibName40=library/library/Power_Management
+LibName41=ab2tech_library/library/ab2_connectivity
+LibName42=ab2tech_library/library/ab2_idc
+LibName43=ab2tech_library/library/ab2_terminal_block

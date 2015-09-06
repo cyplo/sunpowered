@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -33,7 +32,11 @@ LIBS:relays
 LIBS:sensors
 LIBS:nxp_armmcu
 LIBS:dc-dc
-LIBS:sunpowered-cache
+LIBS:powerint
+LIBS:Power_Management
+LIBS:ab2_connectivity
+LIBS:ab2_idc
+LIBS:ab2_terminal_block
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
