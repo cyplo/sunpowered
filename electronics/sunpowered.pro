@@ -40,7 +40,6 @@ LibName8=cmos4000
 LibName9=adc-dac
 LibName10=memory
 LibName11=xilinx
-LibName12=special
 LibName13=microcontrollers
 LibName14=dsp
 LibName15=microchip
