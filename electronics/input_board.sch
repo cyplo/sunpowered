@@ -10,38 +10,13 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:relays
-LIBS:sensors
-LIBS:nxp_armmcu
 LIBS:dc-dc
-LIBS:powerint
-LIBS:Power_Management
-LIBS:ab2_connectivity
-LIBS:ab2_idc
-LIBS:ab2_terminal_block
+LIBS:sunpowered-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title "Sunpowered Input Board"
 Date ""
 Rev ""
@@ -220,10 +195,10 @@ F 3 "" H 7250 2150 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GNDD #PWR01
+L GNDD #PWR05
 U 1 1 55E0DA4C
 P 3450 2300
-F 0 "#PWR01" H 3450 2050 60  0001 C CNN
+F 0 "#PWR05" H 3450 2050 60  0001 C CNN
 F 1 "GNDD" H 3450 2150 60  0000 C CNN
 F 2 "" H 3450 2300 60  0000 C CNN
 F 3 "" H 3450 2300 60  0000 C CNN
@@ -248,10 +223,10 @@ External
 Text GLabel 7200 3000 0    60   Input ~ 0
 PowerOn
 $Comp
-L GNDD #PWR02
+L GNDD #PWR06
 U 1 1 55E0DA5C
 P 4600 2350
-F 0 "#PWR02" H 4600 2100 60  0001 C CNN
+F 0 "#PWR06" H 4600 2100 60  0001 C CNN
 F 1 "GNDD" H 4600 2200 60  0000 C CNN
 F 2 "" H 4600 2350 60  0000 C CNN
 F 3 "" H 4600 2350 60  0000 C CNN
@@ -270,10 +245,10 @@ F 3 "" H 8700 1350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG03
+L PWR_FLAG #FLG07
 U 1 1 55E0DA69
 P 4200 1300
-F 0 "#FLG03" H 4200 1395 30  0001 C CNN
+F 0 "#FLG07" H 4200 1395 30  0001 C CNN
 F 1 "PWR_FLAG" H 4200 1480 30  0001 C CNN
 F 2 "" H 4200 1300 60  0000 C CNN
 F 3 "" H 4200 1300 60  0000 C CNN
@@ -281,10 +256,10 @@ F 3 "" H 4200 1300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR04
+L +5V #PWR08
 U 1 1 55E0DA6F
 P 2850 1600
-F 0 "#PWR04" H 2850 1450 60  0001 C CNN
+F 0 "#PWR08" H 2850 1450 60  0001 C CNN
 F 1 "+5V" H 2850 1740 60  0000 C CNN
 F 2 "" H 2850 1600 60  0000 C CNN
 F 3 "" H 2850 1600 60  0000 C CNN
@@ -297,7 +272,7 @@ Connection ~ 6100 2650
 Connection ~ 6500 1300
 Connection ~ 6500 2650
 Wire Wire Line
-	5350 2200 5350 2650
+	5350 2650 5350 2200
 Connection ~ 5350 2650
 Wire Wire Line
 	5350 1300 5350 1900
@@ -370,17 +345,17 @@ Wire Wire Line
 Wire Wire Line
 	3250 1700 3600 1700
 Wire Wire Line
-	3450 2300 3450 2200
+	3450 2150 3450 2300
 Wire Wire Line
 	3450 1700 3450 1850
 Connection ~ 3450 1700
 Wire Wire Line
 	2850 1600 2850 1700
 $Comp
-L PWR_FLAG #FLG05
+L PWR_FLAG #FLG09
 U 1 1 55E0DAAC
 P 2650 1300
-F 0 "#FLG05" H 2650 1395 30  0001 C CNN
+F 0 "#FLG09" H 2650 1395 30  0001 C CNN
 F 1 "PWR_FLAG" H 2650 1480 30  0001 C CNN
 F 2 "" H 2650 1300 60  0000 C CNN
 F 3 "" H 2650 1300 60  0000 C CNN
@@ -390,10 +365,10 @@ $EndComp
 Text Notes 2900 1600 0    39   ~ 0
 15mA
 $Comp
-L PWR_FLAG #FLG06
+L PWR_FLAG #FLG010
 U 1 1 55E0DAB3
 P 3450 1700
-F 0 "#FLG06" H 3450 1795 30  0001 C CNN
+F 0 "#FLG010" H 3450 1795 30  0001 C CNN
 F 1 "PWR_FLAG" H 3450 1880 30  0001 C CNN
 F 2 "" H 3450 1700 60  0000 C CNN
 F 3 "" H 3450 1700 60  0000 C CNN
@@ -413,35 +388,23 @@ Text GLabel 2500 4650 3    60   Input ~ 0
 PanelCurrentSense
 Text GLabel 1550 3900 0    60   Output ~ 0
 PowerOn
-Text GLabel 2300 4650 3    60   Input ~ 0
+Text GLabel 2300 4500 3    60   Output ~ 0
 PanelVoltageSense-
 Text GLabel 2850 4650 3    60   Input ~ 0
 PanelVoltageSense+
 $Comp
-L +5V #PWR07
+L +5V #PWR011
 U 1 1 55E0DF60
-P 3350 3900
-F 0 "#PWR07" H 3350 3750 60  0001 C CNN
-F 1 "+5V" H 3350 4040 60  0000 C CNN
-F 2 "" H 3350 3900 60  0000 C CNN
-F 3 "" H 3350 3900 60  0000 C CNN
-	1    3350 3900
+P 3350 3800
+F 0 "#PWR011" H 3350 3650 60  0001 C CNN
+F 1 "+5V" H 3350 3940 60  0000 C CNN
+F 2 "" H 3350 3800 60  0000 C CNN
+F 3 "" H 3350 3800 60  0000 C CNN
+	1    3350 3800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2200 3900 3350 3900
-$Comp
-L PWR_FLAG #FLG08
-U 1 1 55E0DF67
-P 3050 3900
-F 0 "#FLG08" H 3050 3995 30  0001 C CNN
-F 1 "PWR_FLAG" H 3050 4080 30  0001 C CNN
-F 2 "" H 3050 3900 60  0000 C CNN
-F 3 "" H 3050 3900 60  0000 C CNN
-	1    3050 3900
-	1    0    0    -1  
-$EndComp
-Connection ~ 3050 3900
 Text GLabel 2650 4650 3    60   Input ~ 0
 CurrentSensorVoltageSense
 $Comp
@@ -460,10 +423,10 @@ Connection ~ 1700 4200
 Connection ~ 1700 4100
 Connection ~ 1700 4000
 $Comp
-L GNDD #PWR09
+L GNDD #PWR012
 U 1 1 55E0DF80
 P 1700 4550
-F 0 "#PWR09" H 1700 4300 60  0001 C CNN
+F 0 "#PWR012" H 1700 4300 60  0001 C CNN
 F 1 "GNDD" H 1700 4400 60  0000 C CNN
 F 2 "" H 1700 4550 60  0000 C CNN
 F 3 "" H 1700 4550 60  0000 C CNN
@@ -479,19 +442,17 @@ Wire Wire Line
 Wire Wire Line
 	2200 4100 2650 4100
 Wire Wire Line
-	2300 4650 2300 4300
+	2300 4500 2300 4300
 Wire Wire Line
 	2300 4300 2200 4300
 Wire Wire Line
 	2200 4200 2500 4200
 Wire Wire Line
 	2500 4200 2500 4650
-Text GLabel 1350 4300 0    60   BiDi ~ 0
-DigitalGround
 Wire Wire Line
-	1350 4300 1700 4300
+	1700 4300 1350 4300
 Wire Wire Line
-	7950 2150 7850 2150
+	7850 2150 7950 2150
 Wire Wire Line
 	7450 2150 7450 2250
 Wire Wire Line
@@ -512,11 +473,6 @@ Wire Wire Line
 	5750 2100 6400 2100
 Wire Wire Line
 	6500 1800 6500 1300
-Text GLabel 2200 3850 1    60   BiDi ~ 0
-+5V
-Wire Wire Line
-	2200 3850 2200 3900
-Connection ~ 2200 3900
 $Comp
 L D_Schottky D2
 U 1 1 55EBE3EF
@@ -562,4 +518,17 @@ Wire Wire Line
 	1700 3900 1550 3900
 Wire Wire Line
 	1700 4000 1700 4550
+Text HLabel 8450 1300 1    60   Output ~ 0
+RawPositive
+Text HLabel 8500 1650 2    60   Output ~ 0
+RawGround
+Text HLabel 3000 3800 1    60   BiDi ~ 0
++5V
+Text HLabel 1350 4300 0    60   BiDi ~ 0
+GNDD
+Wire Wire Line
+	3000 3800 3000 3900
+Connection ~ 3000 3900
+Wire Wire Line
+	3350 3900 3350 3800
 $EndSCHEMATC
