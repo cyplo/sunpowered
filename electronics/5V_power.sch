@@ -53,17 +53,6 @@ F 3 "http://electropark.pl/attachment.php?id_attachment=170" H 2900 1250 50  000
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C6
-U 1 1 55EBFAD5
-P 2000 1500
-F 0 "C6" H 2025 1600 50  0000 L CNN
-F 1 "100u" H 2025 1400 50  0000 L CNN
-F 2 "" H 2038 1350 30  0000 C CNN
-F 3 "" H 2000 1500 60  0000 C CNN
-	1    2000 1500
-	1    0    0    -1  
-$EndComp
-$Comp
 L CP C7
 U 1 1 55EBFB83
 P 4750 1600
@@ -175,4 +164,15 @@ Text HLabel 5300 1350 1    60   BiDi ~ 0
 +5V
 Text HLabel 5300 1850 3    60   BiDi ~ 0
 GNDD
+$Comp
+L CP C?
+U 1 1 55EC1B11
+P 2000 1500
+F 0 "C?" H 2025 1600 50  0000 L CNN
+F 1 "100u" H 2025 1400 50  0000 L CNN
+F 2 "" H 2038 1350 30  0000 C CNN
+F 3 "" H 2000 1500 60  0000 C CNN
+	1    2000 1500
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

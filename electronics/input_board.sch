@@ -83,17 +83,6 @@ F 3 "" H 6100 2450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L THYRISTOR T1
-U 1 1 55E0D9F8
-P 6500 2000
-F 0 "T1" V 6500 2100 50  0000 C CNN
-F 1 "12A" V 6500 1850 50  0000 C CNN
-F 2 "cyplo's:sot428" H 6500 2000 60  0001 C CNN
-F 3 "http://www.nxp.com/documents/data_sheet/BT151S_SER_L_R.pdf" H 6500 2000 60  0001 C CNN
-	1    6500 2000
-	0    -1   -1   0   
-$EndComp
-$Comp
 L R R4
 U 1 1 55E0DA0D
 P 7450 2400
@@ -305,7 +294,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 1050 3800 1050
 Wire Wire Line
-	6100 2100 6100 2300
+	6100 2000 6100 2300
 Connection ~ 6100 2100
 Wire Wire Line
 	8250 1650 8250 1950
@@ -467,12 +456,6 @@ Wire Wire Line
 	4100 2150 4150 2150
 Wire Wire Line
 	2850 1700 2950 1700
-Wire Wire Line
-	6500 2650 6500 2200
-Wire Wire Line
-	5750 2100 6400 2100
-Wire Wire Line
-	6500 1800 6500 1300
 $Comp
 L D_Schottky D2
 U 1 1 55EBE3EF
@@ -531,4 +514,26 @@ Wire Wire Line
 Connection ~ 3000 3900
 Wire Wire Line
 	3350 3900 3350 3800
+Wire Wire Line
+	6200 2000 6100 2000
+Wire Wire Line
+	6100 2100 5750 2100
+Wire Wire Line
+	6500 1800 6500 1300
+Wire Wire Line
+	6500 2200 6500 2650
+$Comp
+L Q_NMOS_GDSD Q?
+U 1 1 5635FEA9
+P 6400 2000
+F 0 "Q?" H 6700 2050 50  0000 R CNN
+F 1 "Q_NMOS_GDSD" H 7100 1950 50  0000 R CNN
+F 2 "" H 6600 2100 29  0000 C CNN
+F 3 "" H 6400 2000 60  0000 C CNN
+	1    6400 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1800 6500 1800
+Connection ~ 6500 1800
 $EndSCHEMATC
