@@ -1,5 +1,6 @@
 from measure import measure
 from influx_config import influx_username, influx_password
+from subprocess import call
 import time
 import pprint
 import json
@@ -8,6 +9,13 @@ import sys
 
 pp = pprint.PrettyPrinter(indent=4)
 measurements = measure()
+
+# decide if we're running low on power
+# TODO: extract the below
+battery_voltage=float(measurements['battery_voltage'])
+if battery_voltage < 11.1:
+    print "going down ...."
+    call('poweroff')    
 
 series_data = []
 points = []
