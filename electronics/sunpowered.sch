@@ -35,6 +35,12 @@ F2 "RawPositive" O R 3100 1200 60
 F3 "RawGround" O R 3100 1400 60 
 F4 "+5V" B L 1050 1700 60 
 F5 "GNDD" B L 1050 2150 60 
+F6 "PanelCurrentSense" O R 3100 2550 39 
+F7 "PanelVoltageSense-" O R 3100 2450 39 
+F8 "PanelVoltageSense+" O R 3100 2350 39 
+F9 "CurrentVoltageSense" O R 3100 2250 39 
+F10 "PowerIn+" I L 1050 1200 60 
+F11 "PowerIn-" I L 1050 1400 60 
 $EndSheet
 $Sheet
 S 4650 1000 1800 1650
@@ -110,4 +116,16 @@ Wire Wire Line
 	6450 1400 6900 1400
 Wire Wire Line
 	6900 1400 6900 1450
+$Comp
+L PWR_FLAG #FLG05
+U 1 1 566DC0A4
+P 6600 1200
+F 0 "#FLG05" H 6600 1295 50  0001 C CNN
+F 1 "PWR_FLAG" H 6600 1380 50  0000 C CNN
+F 2 "" H 6600 1200 60  0000 C CNN
+F 3 "" H 6600 1200 60  0000 C CNN
+	1    6600 1200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6600 1200
 $EndSCHEMATC
