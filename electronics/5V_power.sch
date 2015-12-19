@@ -26,20 +26,9 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L CONN_01X02 P4
-U 1 1 55EBF475
-P 1400 1200
-F 0 "P4" H 1400 1350 50  0000 C CNN
-F 1 "CONN_01X02" V 1500 1200 50  0000 C CNN
-F 2 "" H 1400 1200 60  0000 C CNN
-F 3 "" H 1400 1200 60  0000 C CNN
-	1    1400 1200
-	-1   0    0    1   
-$EndComp
-Text HLabel 1600 1150 1    60   Input ~ 0
+Text HLabel 1600 1150 0    60   Input ~ 0
 RawPositive
-Text HLabel 1600 1250 3    60   Input ~ 0
+Text HLabel 1700 1850 0    60   Input ~ 0
 RawGround
 $Comp
 L LM2576T-5 U1
@@ -87,10 +76,6 @@ F 3 "" H 4300 1350 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	1600 1150 2400 1150
-Wire Wire Line
-	1600 1250 1700 1250
-Wire Wire Line
-	1700 1250 1700 1850
 Wire Wire Line
 	2000 1650 2000 1850
 Wire Wire Line
@@ -145,21 +130,6 @@ F 3 "" H 5050 1850 60  0000 C CNN
 	1    5050 1850
 	1    0    0    -1  
 $EndComp
-$Comp
-L CONN_01X02 P5
-U 1 1 55EC08D2
-P 5500 1550
-F 0 "P5" H 5500 1700 50  0000 C CNN
-F 1 "CONN_01X02" V 5600 1550 50  0000 C CNN
-F 2 "" H 5500 1550 60  0000 C CNN
-F 3 "" H 5500 1550 60  0000 C CNN
-	1    5500 1550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5300 1350 5300 1500
-Wire Wire Line
-	5300 1850 5300 1600
 Text HLabel 5300 1350 1    60   BiDi ~ 0
 +5V
 Text HLabel 5300 1850 3    60   BiDi ~ 0

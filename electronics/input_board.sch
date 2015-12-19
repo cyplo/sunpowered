@@ -104,79 +104,12 @@ F 3 "" H 9300 1900 30  0000 C CNN
 	1    9300 1900
 	0    1    1    0   
 $EndComp
-$Comp
-L C C1
-U 1 1 55E0DA1B
-P 3450 2000
-F 0 "C1" H 3300 1900 50  0000 L CNN
-F 1 "100n" H 3250 2100 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3488 1850 30  0001 C CNN
-F 3 "" H 3450 2000 60  0000 C CNN
-	1    3450 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L C C2
-U 1 1 55E0DA22
-P 4300 2150
-F 0 "C2" V 4350 2200 50  0000 L CNN
-F 1 "47n" V 4350 1950 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4338 2000 30  0001 C CNN
-F 3 "" H 4300 2150 60  0000 C CNN
-	1    4300 2150
-	0    1    1    0   
-$EndComp
-$Comp
-L R R1
-U 1 1 55E0DA2C
-P 3100 1700
-F 0 "R1" V 3180 1700 50  0000 C CNN
-F 1 "330" V 3107 1701 50  0000 C CNN
-F 2 "Resistors_SMD:R_0603_HandSoldering" V 3030 1700 30  0001 C CNN
-F 3 "" H 3100 1700 30  0000 C CNN
-	1    3100 1700
-	0    1    1    0   
-$EndComp
-$Comp
-L ACS713ELCTR-30A-T IC1
-U 1 1 55E0DA34
-P 4000 1700
-F 0 "IC1" V 4250 1250 50  0000 L CNN
-F 1 "ACS713" V 3850 1050 50  0000 L CNN
-F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 4000 1700 50  0001 C CIN
-F 3 "http://www.allegromicro.com/en/Products/Part_Numbers/0713/0713.pdf" H 4100 2150 60  0001 C CNN
-F 4 "Current sensor" V 3750 1150 39  0000 C CNN "Note"
-	1    4000 1700
-	0    -1   1    0   
-$EndComp
 Text Notes 5700 800  0    60   ~ 0
 Overvoltage detection
 Text Notes 3300 800  0    60   ~ 0
 Input measurements
 Text Notes 8850 1500 0    39   ~ 0
 Power on soft switch
-$Comp
-L GNDD #PWR06
-U 1 1 55E0DA4C
-P 3450 2300
-F 0 "#PWR06" H 3450 2050 60  0001 C CNN
-F 1 "GNDD" H 3450 2150 60  0000 C CNN
-F 2 "" H 3450 2300 60  0000 C CNN
-F 3 "" H 3450 2300 60  0000 C CNN
-	1    3450 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L GNDD #PWR07
-U 1 1 55E0DA5C
-P 4600 2350
-F 0 "#PWR07" H 4600 2100 60  0001 C CNN
-F 1 "GNDD" H 4600 2200 60  0000 C CNN
-F 2 "" H 4600 2350 60  0000 C CNN
-F 3 "" H 4600 2350 60  0000 C CNN
-	1    4600 2350
-	1    0    0    -1  
-$EndComp
 $Comp
 L CONN_01X02 P3
 U 1 1 55E0DA62
@@ -186,17 +119,6 @@ F 1 "CONN_01X02" V 10400 1350 50  0000 C CNN
 F 2 "Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_2pol" H 10300 1350 60  0001 C CNN
 F 3 "" H 10300 1350 60  0000 C CNN
 	1    10300 1350
-	1    0    0    -1  
-$EndComp
-$Comp
-L PWR_FLAG #FLG08
-U 1 1 55E0DA69
-P 4200 1300
-F 0 "#FLG08" H 4200 1395 30  0001 C CNN
-F 1 "PWR_FLAG" H 4200 1480 30  0001 C CNN
-F 2 "" H 4200 1300 60  0000 C CNN
-F 3 "" H 4200 1300 60  0000 C CNN
-	1    4200 1300
 	1    0    0    -1  
 $EndComp
 Connection ~ 5750 1300
@@ -210,23 +132,28 @@ Wire Wire Line
 Connection ~ 5350 1300
 Wire Wire Line
 	9800 1650 10100 1650
-Connection ~ 4200 1300
 Wire Wire Line
-	3400 1300 3900 1300
+	3400 1300 3800 1300
 Wire Wire Line
-	1550 1300 2900 1300
+	3800 1300 4000 1300
+Wire Wire Line
+	4000 1300 4050 1300
+Wire Wire Line
+	1550 1300 2650 1300
+Wire Wire Line
+	2650 1300 2900 1300
 Wire Wire Line
 	3800 1050 3800 1300
 Connection ~ 3800 1300
 Wire Wire Line
 	5750 1300 5750 1550
 Wire Wire Line
-	5750 1950 5750 2250
+	5750 1950 5750 2100
+Wire Wire Line
+	5750 2100 5750 2250
 Connection ~ 5750 2100
 Connection ~ 9050 2650
 Connection ~ 9050 1900
-Wire Wire Line
-	3800 3000 3000 3000
 Wire Wire Line
 	3550 1050 3800 1050
 Connection ~ 6100 2100
@@ -235,32 +162,22 @@ Wire Wire Line
 Wire Wire Line
 	9800 2650 9800 2100
 Wire Wire Line
-	5150 1300 10100 1300
+	5150 1300 5350 1300
 Wire Wire Line
-	3400 2800 3400 2650
+	5350 1300 5750 1300
+Wire Wire Line
+	5750 1300 6600 1300
+Wire Wire Line
+	6600 1300 8250 1300
+Wire Wire Line
+	8250 1300 10100 1300
+Wire Wire Line
+	3400 2350 3400 2650
 Connection ~ 3400 2650
 Wire Wire Line
-	3400 2800 3000 2800
-Wire Wire Line
-	4100 2100 4100 2150
-Wire Wire Line
-	4600 1700 4600 2350
-Wire Wire Line
-	4450 2150 4600 2150
-Connection ~ 4600 2150
+	3400 2350 3000 2350
 Wire Wire Line
 	10100 1650 10100 1400
-Wire Wire Line
-	4600 1700 4400 1700
-Wire Wire Line
-	3250 1700 3600 1700
-Wire Wire Line
-	3450 2150 3450 2300
-Wire Wire Line
-	3450 1700 3450 1850
-Connection ~ 3450 1700
-Wire Wire Line
-	2850 1700 2950 1700
 $Comp
 L PWR_FLAG #FLG09
 U 1 1 55E0DAAC
@@ -272,24 +189,6 @@ F 3 "" H 2650 1300 60  0000 C CNN
 	1    2650 1300
 	1    0    0    -1  
 $EndComp
-Text Notes 2900 1600 0    39   ~ 0
-15mA
-$Comp
-L PWR_FLAG #FLG010
-U 1 1 55E0DAB3
-P 3450 1700
-F 0 "#FLG010" H 3450 1795 30  0001 C CNN
-F 1 "PWR_FLAG" H 3450 1880 30  0001 C CNN
-F 2 "" H 3450 1700 60  0000 C CNN
-F 3 "" H 3450 1700 60  0000 C CNN
-	1    3450 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3600 1700 3600 2500
-Wire Wire Line
-	3600 2500 3300 2500
-Connection ~ 3600 1700
 Wire Wire Line
 	9450 1900 9500 1900
 Wire Wire Line
@@ -300,15 +199,13 @@ Wire Wire Line
 	6100 2650 6100 2600
 Wire Wire Line
 	5750 2650 5750 2550
-Wire Wire Line
-	4100 2150 4150 2150
 $Comp
 L D_Schottky D1
 U 1 1 55EBE3EF
 P 5000 1300
 F 0 "D1" H 5000 1400 50  0000 C CNN
 F 1 "12A" H 5000 1200 50  0000 C CNN
-F 2 "cyplo's:TO277A" H 5000 1300 60  0001 C CNN
+F 2 "Diodes_SMD:D-Pak_TO252AA" H 5000 1300 60  0001 C CNN
 F 3 "http://www.vishay.com/docs/89094/v12p12.pdf" H 5000 1300 60  0001 C CNN
 	1    5000 1300
 	-1   0    0    1   
@@ -335,7 +232,11 @@ RawPositive
 Text HLabel 10100 1650 2    60   Output ~ 0
 RawGround
 Wire Wire Line
-	5650 2100 6300 2100
+	5650 2100 5750 2100
+Wire Wire Line
+	5750 2100 6100 2100
+Wire Wire Line
+	6100 2100 6300 2100
 $Comp
 L Q_NMOS_GDS Q4
 U 1 1 566D3057
@@ -371,7 +272,9 @@ F 3 "" H 6500 2100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6100 1700 6100 2300
+	6100 1700 6100 2100
+Wire Wire Line
+	6100 2100 6100 2300
 Wire Wire Line
 	6100 1700 6300 1700
 Wire Wire Line
@@ -416,11 +319,33 @@ Wire Wire Line
 Text Label 6800 2950 0    39   ~ 0
 Overvoltage
 Wire Wire Line
-	4100 1300 4850 1300
+	4350 1300 4400 1300
 Wire Wire Line
-	1650 2650 9800 2650
+	4400 1300 4850 1300
 Wire Wire Line
-	8650 1900 9150 1900
+	1650 2650 3400 2650
+Wire Wire Line
+	3400 2650 5350 2650
+Wire Wire Line
+	5350 2650 5750 2650
+Wire Wire Line
+	5750 2650 6100 2650
+Wire Wire Line
+	6100 2650 6600 2650
+Wire Wire Line
+	6600 2650 7900 2650
+Wire Wire Line
+	7900 2650 8250 2650
+Wire Wire Line
+	8250 2650 9050 2650
+Wire Wire Line
+	9050 2650 9500 2650
+Wire Wire Line
+	9500 2650 9800 2650
+Wire Wire Line
+	8650 1900 9050 1900
+Wire Wire Line
+	9050 1900 9150 1900
 Text Label 8850 1900 0    39   ~ 0
 VoltageOK
 Text Label 6800 2650 0    39   ~ 0
@@ -452,7 +377,9 @@ Wire Wire Line
 Text Label 7150 1300 0    39   ~ 0
 InputPower
 Wire Wire Line
-	7450 1900 7950 1900
+	7450 1900 7900 1900
+Wire Wire Line
+	7900 1900 7950 1900
 Text Label 7700 1900 0    39   ~ 0
 Overvoltage
 Wire Wire Line
@@ -490,10 +417,8 @@ Wire Wire Line
 Connection ~ 7900 1900
 Text Notes 7650 1650 0    39   ~ 0
 Crowbar
-Text HLabel 2850 1700 0    39   BiDi ~ 0
-+5V
-Text HLabel 3000 3000 0    39   Output ~ 0
-PanelCurrentSense
+Text HLabel 4000 1750 0    39   Output ~ 0
+PanelCurrentSenseHigh
 Text HLabel 4650 3850 0    39   BiDi ~ 0
 GNDD
 $Comp
@@ -509,28 +434,32 @@ F 3 "" H 4650 4000 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	4650 3850 4650 4000
-Text HLabel 3000 2800 0    39   Output ~ 0
+Text HLabel 3000 2350 0    39   Output ~ 0
 PanelVoltageSense-
 Text HLabel 3550 1050 0    39   Output ~ 0
 PanelVoltageSense+
-Text HLabel 3300 2500 0    39   Output ~ 0
-CurrentVoltageSense
-$Comp
-L PWR_FLAG #FLG012
-U 1 1 566DC42F
-P 2850 1700
-F 0 "#FLG012" H 2850 1795 50  0001 C CNN
-F 1 "PWR_FLAG" H 2850 1880 50  0000 C CNN
-F 2 "" H 2850 1700 60  0000 C CNN
-F 3 "" H 2850 1700 60  0000 C CNN
-	1    2850 1700
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3800 2100 3800 3000
 Text HLabel 1650 2650 0    39   Input ~ 0
 PowerIn-
 Connection ~ 2650 1300
 Text HLabel 1550 1300 0    39   Input ~ 0
 PowerIn+
+$Comp
+L R R?
+U 1 1 56756EEE
+P 4200 1300
+F 0 "R?" V 4280 1300 50  0000 C CNN
+F 1 "0.01, 1W" V 4200 1300 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 4130 1300 30  0000 C CNN
+F 3 "" H 4200 1300 30  0000 C CNN
+	1    4200 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4000 1300 4000 1750
+Connection ~ 4000 1300
+Wire Wire Line
+	4400 1300 4400 1850
+Connection ~ 4400 1300
+Text HLabel 4400 1850 0    39   Output ~ 0
+PanelCurrentSenseLow
 $EndSCHEMATC
