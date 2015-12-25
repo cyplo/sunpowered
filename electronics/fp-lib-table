@@ -2,4 +2,7 @@
   (lib (name cyplo's)(type KiCad)(uri ${KIPRJMOD}/custom.pretty)(options "")(descr ""))
   (lib (name ab2_idc)(type Legacy)(uri ${KIPRJMOD}/ab2tech_library/modules/ab2_idc.mod)(options "")(descr ""))
   (lib (name "TO SOT SMD")(type KiCad)(uri ${KIPRJMOD}/modules/TO_SOT_Packages_SMD.pretty)(options "")(descr ""))
+  (lib (name Connectors)(type KiCad)(uri ${KIPRJMOD}/modules/Connect.pretty)(options "")(descr ""))
+  (lib (name ab2_terminal_block)(type KiCad)(uri "$(KIPRJMOD)/ab2tech_library/modules/ab2_terminal_block.pretty")(options "")(descr ""))
+  (lib (name "Pin Headers")(type KiCad)(uri ${KIPRJMOD}/modules/Pin_Headers.pretty)(options "")(descr ""))
 )

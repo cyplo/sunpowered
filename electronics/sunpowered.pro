@@ -1,4 +1,4 @@
-update=Fri 25 Dec 2015 14:44:10 CET
+update=Fri 25 Dec 2015 16:23:57 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -37,7 +37,7 @@ SpiceUseNetNumbers=0
 LabSize=60
 [eeschema]
 version=1
-LibDir=library/library;library/modules
+LibDir=library/library;library/modules;ab2tech_library/library;ab2tech_library/modules
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -53,3 +53,4 @@ LibName11=xilinx
 LibName12=library/library/regul
 LibName13=library/library/dc-dc
 LibName14=library/library/device
+LibName15=ab2tech_library/library/ab2_terminal_block

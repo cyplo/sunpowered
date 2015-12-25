@@ -7,3 +7,9 @@
 [submodule "electronics/modules/TO_SOT_Packages_SMD.pretty"]
 	path = electronics/modules/TO_SOT_Packages_SMD.pretty
 	url = https://github.com/KiCad/TO_SOT_Packages_SMD.pretty.git
+[submodule "electronics/modules/Connect.pretty"]
+	path = electronics/modules/Connect.pretty
+	url = https://github.com/KiCad/Connect.pretty.git
+[submodule "electronics/modules/Pin_Headers.pretty"]
+	path = electronics/modules/Pin_Headers.pretty
+	url = https://github.com/KiCad/Pin_Headers.pretty.git
