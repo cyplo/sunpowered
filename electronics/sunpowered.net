@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/cyryl/dev/sunpowered/electronics/sunpowered.sch)
-    (date "Fri 25 Dec 2015 16:34:57 CET")
+    (date "Fri 25 Dec 2015 16:52:25 CET")
     (tool "Eeschema 4.0.1-2.fc23-product")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -101,14 +101,16 @@
       (sheetpath (names "/Input Measurement And Protection/") (tstamps /55E0BF75/))
       (tstamp 55EBF3A1))
     (comp (ref Q2)
-      (value IRLZ44N)
+      (value IRFR13N20D)
+      (footprint "TO SOT SMD:TO-252-2Lead")
       (fields
         (field (name Note) "High power MOSFET"))
       (libsource (lib device) (part Q_NMOS_GDS))
       (sheetpath (names "/Input Measurement And Protection/") (tstamps /55E0BF75/))
       (tstamp 566D3057))
     (comp (ref Q1)
-      (value IRLZ44N)
+      (value IRFR13N20D)
+      (footprint "TO SOT SMD:TO-252-2Lead")
       (fields
         (field (name Note) "High power MOSFET"))
       (libsource (lib device) (part Q_NMOS_GDS))
