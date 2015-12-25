@@ -13,3 +13,6 @@
 [submodule "electronics/modules/Pin_Headers.pretty"]
 	path = electronics/modules/Pin_Headers.pretty
 	url = https://github.com/KiCad/Pin_Headers.pretty.git
+[submodule "electronics/modules/Diodes_SMD.pretty"]
+	path = electronics/modules/Diodes_SMD.pretty
+	url = https://github.com/KiCad/Diodes_SMD.pretty.git
