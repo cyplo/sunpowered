@@ -4,3 +4,6 @@
 [submodule "electronics/ab2tech_library"]
 	path = electronics/ab2tech_library
 	url = https://github.com/ab2tech/KiCad.git
+[submodule "electronics/modules/TO_SOT_Packages_SMD.pretty"]
+	path = electronics/modules/TO_SOT_Packages_SMD.pretty
+	url = https://github.com/KiCad/TO_SOT_Packages_SMD.pretty.git

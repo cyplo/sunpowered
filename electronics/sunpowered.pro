@@ -1,4 +1,4 @@
-update=Sun 06 Sep 2015 11:05:37 CEST
+update=Fri 25 Dec 2015 14:44:10 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,9 +25,19 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=schematics
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
-LibDir=library/library;library/modules;ab2tech_library/library;ab2tech_library/modules
+LibDir=library/library;library/modules
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -43,13 +53,3 @@ LibName11=xilinx
 LibName12=library/library/regul
 LibName13=library/library/dc-dc
 LibName14=library/library/device
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=schematics
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
