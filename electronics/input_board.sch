@@ -111,17 +111,6 @@ Input measurements
 Text Notes 8575 1500 0    39   ~ 0
 Power on soft switch
 $Comp
-L D_Schottky D1
-U 1 1 55EBE3EF
-P 4150 1300
-F 0 "D1" H 4150 1400 50  0000 C CNN
-F 1 "12A" H 4150 1200 50  0000 C CNN
-F 2 "Diodes SMD:D-Pak_TO252AA" H 4150 1300 60  0001 C CNN
-F 3 "http://www.vishay.com/docs/89094/v12p12.pdf" H 4150 1300 60  0001 C CNN
-	1    4150 1300
-	-1   0    0    1   
-$EndComp
-$Comp
 L C C4
 U 1 1 55EBF3A1
 P 9225 2250
@@ -237,7 +226,7 @@ Connection ~ 4500 1300
 Wire Wire Line
 	9525 1650 9825 1650
 Wire Wire Line
-	2550 1300 4000 1300
+	2550 1300 4100 1300
 Wire Wire Line
 	2950 1050 2950 1300
 Connection ~ 2950 1300
@@ -290,7 +279,7 @@ Wire Wire Line
 Wire Wire Line
 	8375 1900 8875 1900
 Wire Wire Line
-	7975 1300 7975 1700
+	7975 1275 7975 1700
 Wire Wire Line
 	7975 2100 7975 2650
 Connection ~ 7975 2650
@@ -337,7 +326,7 @@ Wire Wire Line
 Wire Wire Line
 	6525 1900 6525 2200
 Wire Wire Line
-	5850 1900 5850 1300
+	5850 1300 5850 1900
 Connection ~ 5850 1300
 Wire Wire Line
 	5850 2200 5850 2650
@@ -346,8 +335,6 @@ Wire Wire Line
 	5650 1500 6700 1500
 Wire Wire Line
 	5650 2000 5650 1500
-Wire Wire Line
-	4300 1300 9925 1300
 Wire Wire Line
 	8375 1600 6850 1600
 Wire Wire Line
@@ -371,4 +358,28 @@ Wire Notes Line
 	6775 1400 6675 1400
 Text Notes 6550 2550 0    39   ~ 0
 Inverter
+$Comp
+L SCHDPAK D1
+U 1 1 567D7FA2
+P 4300 1300
+F 0 "D1" H 4300 1400 50  0000 C CNN
+F 1 "12A" H 4300 1200 50  0000 C CNN
+F 2 "TO SOT SMD:TO-252-2Lead" H 4300 1300 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/89094/v12p12.pdf" H 4300 1300 50  0001 C CNN
+	1    4300 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 1250 4100 1350
+Connection ~ 4100 1300
+Wire Wire Line
+	4500 1300 9925 1300
+Text Label 3525 1300 0    39   ~ 0
+PowerIn+
+Text Label 4500 1300 0    39   ~ 0
+InputPower
+Text Label 3650 2650 0    39   ~ 0
+InputGround
+Text Label 2600 1300 0    39   ~ 0
+PowerIn+
 $EndSCHEMATC

@@ -36,10 +36,10 @@ F2 "RawPositive" O R 3900 1200 60
 F3 "RawGround" O R 3900 1400 60 
 F4 "PanelCurrentSenseHigh" O R 3900 2050 39 
 F5 "PanelVoltageSense-" O R 3900 2450 39 
-F6 "PanelVoltageSense+" O R 3900 2350 39 
+F6 "PanelVoltageSense+" O R 3900 2200 39 
 F7 "PowerIn+" I L 1850 1200 60 
 F8 "PowerIn-" I L 1850 1400 60 
-F9 "PanelCurrentSenseLow" O R 3900 2200 39 
+F9 "PanelCurrentSenseLow" O R 3900 2350 39 
 $EndSheet
 $Comp
 L PWR_FLAG #FLG01
@@ -107,7 +107,7 @@ Wire Wire Line
 Wire Wire Line
 	1250 1150 1250 1250
 Wire Wire Line
-	1850 1200 1250 1200
+	1250 1200 1850 1200
 Connection ~ 1250 1200
 Wire Wire Line
 	1250 1350 1250 1450
