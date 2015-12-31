@@ -32,8 +32,8 @@ S 1850 1000 2050 1650
 U 55E0BF75
 F0 "Input Measurement And Protection" 61
 F1 "input_board.sch" 61
-F2 "RawPositive" O R 3900 1200 60 
-F3 "RawGround" O R 3900 1400 60 
+F2 "RawPositive" O R 3900 1400 60 
+F3 "RawGround" O R 3900 1200 60 
 F4 "PanelCurrentSenseHigh" O R 3900 2050 39 
 F5 "PanelVoltageSense-" O R 3900 2450 39 
 F6 "PanelVoltageSense+" O R 3900 2200 39 
