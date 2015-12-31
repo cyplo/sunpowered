@@ -1,13 +1,13 @@
 #!/bin/bash
-front=`ls  *-F_Cu.gbr`
-projname=`basename $front \-F_Cu.gbr`
+front=`ls  *-F.Cu.gbr`
+projname=`basename $front \-F.Cu.gbr`
  
-mv *-F_Cu.gbr $projname.GTL
-mv *-B_Cu.gbr $projname.GBL
-mv *-F_Mask.gbr $projname.GTS
-mv *-B_Mask.gbr $projname.GBS
-mv *-F_SilkS.gbr $projname.GTO
-mv *-B_SilkS.gbr $projname.GBO
-mv *-Edge_Cuts.gbr $projname.GKO
-mv *.drl $projname.XLN
+mv -v *-F.Cu.gbr $projname.GTL
+mv -v *-B.Cu.gbr $projname.GBL
+mv -v *-F.Mask.gbr $projname.GTS
+mv -v *-B.Mask.gbr $projname.GBS
+mv -v *-F.SilkS.gbr $projname.GTO
+mv -v *-B.SilkS.gbr $projname.GBO
+mv -v *-Edge.Cuts.gbr $projname.GKO
+mv -v *.drl $projname.XLN
 
