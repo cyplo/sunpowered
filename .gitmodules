@@ -13,3 +13,6 @@
 [submodule "electronics/modules/Diodes_SMD.pretty"]
 	path = electronics/modules/Diodes_SMD.pretty
 	url = https://github.com/KiCad/Diodes_SMD.pretty.git
+[submodule "electronics/library"]
+	path = electronics/library
+	url = git@lab.cyplo.net:cyplo/kicad-library.git
