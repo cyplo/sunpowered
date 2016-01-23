@@ -13,7 +13,7 @@ measurements = measure()
 # decide if we're running low on power
 # TODO: extract the below
 battery_voltage=float(measurements['battery_voltage'])
-if battery_voltage < 11.1:
+if battery_voltage < 11.0:
     print "going down ...."
     call('poweroff')    
 
