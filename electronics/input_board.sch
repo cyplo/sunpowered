@@ -1,4 +1,5 @@
 EESchema Schematic File Version 2
+LIBS:sunpowered-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -202,9 +203,11 @@ $EndComp
 Text HLabel 3050 2050 0    39   Output ~ 0
 PanelCurrentSenseLow
 $Comp
-L BSL316C U1
+L BSL316C-RESCUE-sunpowered U1
 U 1 1 567D6BFF
 P 6075 2000
+AR Path="/567D6BFF" Ref="U1"  Part="1" 
+AR Path="/55E0BF75/567D6BFF" Ref="U1"  Part="1" 
 F 0 "U1" V 5725 2250 50  0000 L CNN
 F 1 "BSL316C" V 6425 1925 50  0000 L CNN
 F 2 "TO SOT SMD:TSOT-6-MK06A_Handsoldering" V 6400 2375 50  0001 L CIN
