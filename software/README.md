@@ -2,7 +2,7 @@
 
      ~# aptitude install python-smbus python-pip python-dev libpng-dev                              
                                                                                                                                   
-     ~# pip install --upgrade jinja2 mpld3 pyowm psutil
+     ~# pip install --upgrade jinja2 mpld3 pyowm psutil influxdb
 
      ~# cat /etc/modules 
      bcm2708-rng
