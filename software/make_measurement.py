@@ -19,14 +19,12 @@ if battery_voltage < 11.0:
     call('poweroff')    
 
 series_data = []
-points = []
-points.append([])
-columns = []
-inner_object={}
-inner_object['fields']=measurements
-inner_object['measurement']='bundle'
-inner_object['timestamp']=measurements['timestamp']
-series_data.append(inner_object)
+for key, value in measurements.iteritems():
+	inner_object={}
+	inner_object['fields']={'value': value}
+	inner_object['measurement']=key
+	inner_object['timestamp']=measurements['timestamp']
+	series_data.append(inner_object)
 
 username=influx_username()
 password=influx_password()
