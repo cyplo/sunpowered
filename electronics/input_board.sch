@@ -66,7 +66,7 @@ L R R2
 U 1 1 55E0D9EA
 P 4900 2400
 F 0 "R2" H 5000 2200 50  0000 C CNN
-F 1 "1k" V 4907 2401 50  0000 C CNN
+F 1 "13k" V 4907 2401 50  0000 C CNN
 F 2 "Resistors_SMD:R_1206_HandSoldering" V 4830 2400 30  0001 C CNN
 F 3 "" H 4900 2400 30  0000 C CNN
 	1    4900 2400
@@ -84,101 +84,50 @@ F 3 "" H 5250 2450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R3
+L R R4
 U 1 1 55E0DA0D
-P 8775 2250
-F 0 "R3" H 8875 2150 50  0000 C CNN
-F 1 "10k" V 8782 2251 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 8705 2250 30  0001 C CNN
-F 3 "" H 8775 2250 30  0000 C CNN
-	1    8775 2250
+P 6925 2125
+F 0 "R4" H 7025 2025 50  0000 C CNN
+F 1 "1M" V 6932 2126 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6855 2125 30  0001 C CNN
+F 3 "" H 6925 2125 30  0000 C CNN
+	1    6925 2125
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R4
+L R R5
 U 1 1 55E0DA14
-P 9025 1900
-F 0 "R4" V 8925 1900 50  0000 C CNN
-F 1 "1k" V 9032 1901 50  0000 C CNN
-F 2 "Resistors_SMD:R_1206_HandSoldering" V 8955 1900 30  0001 C CNN
-F 3 "" H 9025 1900 30  0000 C CNN
-	1    9025 1900
+P 7175 1775
+F 0 "R5" V 7075 1775 50  0000 C CNN
+F 1 "1k" V 7182 1776 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 7105 1775 30  0001 C CNN
+F 3 "" H 7175 1775 30  0000 C CNN
+	1    7175 1775
 	0    1    1    0   
 $EndComp
-Text Notes 4850 800  0    60   ~ 0
-Overvoltage detection
 Text Notes 2450 800  0    60   ~ 0
 Input measurements
-Text Notes 8575 1500 0    39   ~ 0
+Text Notes 6725 1375 0    39   ~ 0
 Power on soft switch
 $Comp
-L C C4
+L C C3
 U 1 1 55EBF3A1
-P 9225 2250
-F 0 "C4" H 9275 2350 50  0000 L CNN
-F 1 "10u" H 9275 2150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 9263 2100 30  0001 C CNN
-F 3 "" H 9225 2250 60  0000 C CNN
-	1    9225 2250
+P 7375 2125
+F 0 "C3" H 7425 2225 50  0000 L CNN
+F 1 "10u" H 7425 2025 50  0000 L CNN
+F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7413 1975 30  0001 C CNN
+F 3 "" H 7375 2125 60  0000 C CNN
+	1    7375 2125
 	1    0    0    -1  
 $EndComp
-Text HLabel 9925 1300 2    60   Output ~ 0
+Text HLabel 8150 1975 2    60   Output ~ 0
 RawPositive
-Text HLabel 9825 1650 2    60   Output ~ 0
-RawGround
-$Comp
-L Q_NMOS_GDS Q2
-U 1 1 566D3057
-P 9425 1900
-F 0 "Q2" H 9725 1950 50  0000 R CNN
-F 1 "IRFR13N20D" H 9500 2100 50  0000 R CNN
-F 2 "TO SOT SMD:TO-252-2Lead" H 9625 2000 29  0000 C CNN
-F 3 "" H 9425 1900 60  0000 C CNN
-F 4 "High power MOSFET" V 9675 1600 39  0000 C CNN "Note"
-	1    9425 1900
-	1    0    0    -1  
-$EndComp
-Text Notes 5350 1400 2    39   ~ 0
-Inverter\n
-Text Label 7150 1600 0    39   ~ 0
-VoltageOK
-Text Label 6300 1500 0    39   ~ 0
-Overvoltage
-Text Label 8575 1900 0    39   ~ 0
+Text Label 6725 1775 0    39   ~ 0
 VoltageOK
 Text Label 5950 2650 0    39   ~ 0
 InputGround
-Text Notes 7725 800  0    60   ~ 0
-Overvoltage protection
-$Comp
-L Q_NMOS_GDS Q1
-U 1 1 566D8926
-P 7875 1900
-F 0 "Q1" H 8175 1950 50  0000 R CNN
-F 1 "IRFR13N20D" H 7925 2050 50  0000 R CNN
-F 2 "TO SOT SMD:TO-252-2Lead" H 8075 2000 29  0000 C CNN
-F 3 "" H 7875 1900 60  0000 C CNN
-F 4 "High power MOSFET" V 8125 1600 39  0000 C CNN "Note"
-	1    7875 1900
-	1    0    0    -1  
-$EndComp
 Text Label 6300 1300 0    39   ~ 0
 InputPower
-Text Label 7000 1900 0    39   ~ 0
-Overvoltage
-$Comp
-L C C3
-U 1 1 566D95D7
-P 7625 2250
-F 0 "C3" H 7675 2350 50  0000 L CNN
-F 1 "47n" H 7675 2150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_1206_HandSoldering" H 7663 2100 30  0001 C CNN
-F 3 "" H 7625 2250 60  0000 C CNN
-	1    7625 2250
-	1    0    0    -1  
-$EndComp
-Text Notes 7375 1675 0    39   ~ 0
-Crowbar
 Text HLabel 3550 1950 0    39   Output ~ 0
 PanelCurrentSenseHigh
 Text HLabel 2150 2350 0    39   Output ~ 0
@@ -202,19 +151,6 @@ F 3 "" H 3300 2650 30  0000 C CNN
 $EndComp
 Text HLabel 3050 2050 0    39   Output ~ 0
 PanelCurrentSenseLow
-$Comp
-L BSL316C-RESCUE-sunpowered U1
-U 1 1 567D6BFF
-P 6075 2000
-AR Path="/567D6BFF" Ref="U1"  Part="1" 
-AR Path="/55E0BF75/567D6BFF" Ref="U1"  Part="1" 
-F 0 "U1" V 5725 2250 50  0000 L CNN
-F 1 "BSL316C" V 6425 1925 50  0000 L CNN
-F 2 "TO SOT SMD:TSOT-6-MK06A_Handsoldering" V 6400 2375 50  0001 L CIN
-F 3 "http://www.tme.eu/pl/Document/4b574d3927d8236e64e73a18d2b68b94/BSL316CH6327XTSA1.pdf" H 5875 2175 50  0001 L CNN
-	1    6075 2000
-	0    1    1    0   
-$EndComp
 Text Label 5050 2000 0    39   ~ 0
 Overvoltage
 Connection ~ 4900 1300
@@ -227,8 +163,6 @@ Wire Wire Line
 	4500 1300 4500 1900
 Connection ~ 4500 1300
 Wire Wire Line
-	9525 1650 9825 1650
-Wire Wire Line
 	2550 1300 4100 1300
 Wire Wire Line
 	2950 1050 2950 1300
@@ -237,78 +171,42 @@ Wire Wire Line
 	4900 1300 4900 1550
 Wire Wire Line
 	4900 1950 4900 2250
-Connection ~ 8775 2650
-Connection ~ 8775 1900
+Connection ~ 6925 1775
 Wire Wire Line
 	2700 1050 2950 1050
-Wire Wire Line
-	9525 1650 9525 1700
-Wire Wire Line
-	9525 2650 9525 2100
 Wire Wire Line
 	2550 2350 2550 2650
 Wire Wire Line
 	2550 2350 2150 2350
 Wire Wire Line
-	9175 1900 9225 1900
+	7325 1775 7375 1775
 Wire Wire Line
-	8775 1900 8775 2100
+	6925 1775 6925 1975
 Wire Wire Line
-	8775 2650 8775 2400
+	6925 2650 6925 2275
 Wire Wire Line
 	5250 2650 5250 2600
 Wire Wire Line
 	4900 2650 4900 2550
 Wire Wire Line
-	9225 2650 9225 2400
-Connection ~ 9225 2650
+	7375 2650 7375 2275
 Wire Wire Line
-	9225 1900 9225 2100
-Connection ~ 9225 1900
+	7375 1775 7375 1975
+Connection ~ 7375 1775
 Wire Notes Line
 	3950 700  3950 3300
 Wire Notes Line
-	9725 1550 8575 1550
+	7875 1425 6725 1425
 Wire Notes Line
-	8575 1550 8575 2950
+	6725 1425 6725 2825
 Wire Notes Line
-	8575 2950 9775 2950
+	6725 2825 7925 2825
 Wire Notes Line
-	9775 2950 9775 1550
+	7925 2825 7925 1425
 Wire Notes Line
-	9775 1550 9675 1550
+	7925 1425 7825 1425
 Wire Wire Line
-	3450 2650 9525 2650
-Wire Wire Line
-	8375 1900 8875 1900
-Wire Wire Line
-	7975 1275 7975 1700
-Wire Wire Line
-	7975 2100 7975 2650
-Connection ~ 7975 2650
-Connection ~ 7975 1300
-Wire Wire Line
-	8375 1600 8375 1900
-Wire Wire Line
-	6700 1900 7675 1900
-Wire Notes Line
-	7375 1700 8225 1700
-Wire Notes Line
-	7475 2750 8225 2750
-Wire Notes Line
-	8225 2750 8225 1700
-Wire Notes Line
-	6975 700  6975 3300
-Wire Notes Line
-	7375 1700 7375 2750
-Wire Notes Line
-	7375 2750 7525 2750
-Wire Wire Line
-	7625 2400 7625 2650
-Connection ~ 7625 2650
-Wire Wire Line
-	7625 2100 7625 1900
-Connection ~ 7625 1900
+	6225 1775 7025 1775
 Wire Wire Line
 	3550 1950 3550 2650
 Connection ~ 3550 2650
@@ -319,48 +217,13 @@ Connection ~ 2550 2650
 Wire Wire Line
 	5250 2000 5250 2300
 Wire Wire Line
-	4900 2000 5650 2000
+	4900 2000 5925 2000
 Connection ~ 4900 2000
 Connection ~ 5250 2000
 Wire Wire Line
 	1650 2650 3150 2650
 Wire Wire Line
 	2050 1300 1550 1300
-Wire Wire Line
-	6525 1900 6525 2200
-Wire Wire Line
-	5850 1300 5850 1900
-Connection ~ 5850 1300
-Wire Wire Line
-	5850 2200 5850 2650
-Connection ~ 5850 2650
-Wire Wire Line
-	5650 1500 6700 1500
-Wire Wire Line
-	5650 2000 5650 1500
-Wire Wire Line
-	8375 1600 6850 1600
-Wire Wire Line
-	6850 1600 6850 2025
-Wire Wire Line
-	6850 2025 6525 2025
-Connection ~ 6525 2025
-Wire Wire Line
-	6700 1500 6700 1900
-Connection ~ 6200 1500
-Connection ~ 6050 1500
-Wire Notes Line
-	6700 1400 5700 1400
-Wire Notes Line
-	5700 1400 5700 2475
-Wire Notes Line
-	5700 2475 6775 2475
-Wire Notes Line
-	6775 2475 6775 1400
-Wire Notes Line
-	6775 1400 6675 1400
-Text Notes 6550 2550 0    39   ~ 0
-Inverter
 $Comp
 L SCHDPAK D1
 U 1 1 567D7FA2
@@ -375,8 +238,6 @@ $EndComp
 Wire Wire Line
 	4100 1250 4100 1350
 Connection ~ 4100 1300
-Wire Wire Line
-	4500 1300 9925 1300
 Text Label 3525 1300 0    39   ~ 0
 PowerIn+
 Text Label 4500 1300 0    39   ~ 0
@@ -385,4 +246,58 @@ Text Label 3650 2650 0    39   ~ 0
 InputGround
 Text Label 2600 1300 0    39   ~ 0
 PowerIn+
+$Comp
+L R R3
+U 1 1 57133762
+P 6225 1550
+F 0 "R3" V 6305 1550 50  0000 C CNN
+F 1 "10k" V 6225 1550 50  0000 C CNN
+F 2 "" V 6155 1550 50  0000 C CNN
+F 3 "" H 6225 1550 50  0000 C CNN
+	1    6225 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6225 1700 6225 1800
+Wire Wire Line
+	6225 1400 6225 1300
+Connection ~ 6225 1300
+Wire Wire Line
+	6225 2200 6225 2650
+Connection ~ 6225 2650
+Connection ~ 6225 1775
+Wire Wire Line
+	3450 2650 8100 2650
+Connection ~ 6925 2650
+Connection ~ 7375 2650
+$Comp
+L Q_PMOS_DGS Q?
+U 1 1 57134976
+P 6125 2000
+F 0 "Q?" H 6425 2050 50  0000 R CNN
+F 1 "Q_PMOS_DGS" H 6775 1950 50  0000 R CNN
+F 2 "" H 6325 2100 50  0000 C CNN
+F 3 "" H 6125 2000 50  0000 C CNN
+	1    6125 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_DGS Q?
+U 1 1 571349D9
+P 7575 1775
+F 0 "Q?" H 7875 1825 50  0000 R CNN
+F 1 "Q_PMOS_DGS" H 8225 1725 50  0000 R CNN
+F 2 "" H 7775 1875 50  0000 C CNN
+F 3 "" H 7575 1775 50  0000 C CNN
+	1    7575 1775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7675 1575 7675 1300
+Wire Wire Line
+	7675 1300 4500 1300
+Wire Wire Line
+	7675 1975 8150 1975
+Text HLabel 8100 2650 2    60   Output ~ 0
+RawGround
 $EndSCHEMATC
