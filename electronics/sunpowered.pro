@@ -1,4 +1,4 @@
-update=Sat 02 Jan 2016 12:46:50 CET
+update=4/17/2016 11:52:06 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,16 +25,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=schematics
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=library/library;library/modules;ab2tech_library/library;ab2tech_library/modules
@@ -55,3 +45,13 @@ LibName13=library/library/regul
 LibName14=library/library/dc-dc
 LibName15=library/library/device
 LibName16=ab2tech_library/library/ab2_terminal_block
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=schematics
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
